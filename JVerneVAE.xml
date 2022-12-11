@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      
+      <fileDesc>
+         <titleStmt>
+            <title>LE TOUR DU MONDE EN QUATRE-VINGTS JOURS</title>
+            <title type="sub">DANS LEQUEL PHILEAS FOGG DESCEND TOUTE L'ADMIRABLE VALLÉE DU GANGE V SANS MÊME SONGER A LA VOIR.</title>
+            <author>
+               <persName xml:id="JV" ref="https://www.idref.fr/027181685"><!--  à expliquer dans l'ODD :
+                  utilisation attribut ref qui contient une url renvoyant vers notice idref de JV pr désambiguiser l'identité de l'auteur. avantage d'idref=concentre ts les reftiels au niveau ens superieur
+                  ET aussi expliquer chaque bfois que je mets un persname j'utilise un xml id lié pour ? -->
+                  <forename>Jules</forename>
+                  <surname>Verne</surname>
+               </persName>
+            </author>
+         </titleStmt>
+         
+         <!-- Informations sur l'édition du document encodé -->
+         <editionStmt>
+            <edition>
+               Exercice XML TEI - Encodage FEUILLETON DU TEMPS DU 17 NOVEMBRE 1872
+            </edition>
+            <respStmt>
+               <resp>Transcription et encodage du feuilleton</resp>
+               <persName xml:id="AE">
+                  <forename>Aude</forename>
+                  <surname>Eychenne</surname>
+               </persName>
+            </respStmt>
+         </editionStmt>
+         
+         <!-- Informations sur la publication/distribution du document encodé. Pr ODD : Travail placé sous une licence CC permettant libre réutilisation hors utlisation cciale -->
+         <publicationStmt>
+            <publisher>Éditions en ligne de l’École des chartes</publisher>
+            <pubPlace>Paris</pubPlace>
+            <date when-iso="2022-01">Janvier 2022</date> 
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+                  Licence Creative Commons Attribution-partage dans les mêmes conditions
+               </licence>
+            </availability>
+         </publicationStmt>
+         
+         
+         <!-- Ressources bibliographique pour désigner la source du texte encodé --><!--biblFull plus complet-->
+         <!--<p>L'encodage se fonde sur la numérisation du journal <bibl>Le Temps</bibl> disponible sur l'interface de Gallica.</p>-->
+         <sourceDesc>  
+            <biblFull>
+               <titleStmt>
+                  <title>Le tour du monde en quatre-vingts jours</title>
+                  <author ref="https://www.idref.fr/027181685">
+                     <persName ref="JV">Jules Verne</persName>
+                     <forename>Jules</forename>
+                     <surname>Verne</surname>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher> Le Temps</publisher>
+                  <pubPlace>
+                     <address>
+                        <country key="FR"/>
+                        <settlement type="city">Paris</settlement>
+                     </address>
+                  </pubPlace>
+                  <date when-iso="1872-11-17">17 novembre 1872 </date>  <!--question : c'est quoi iso ? -->
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k2251979/f1.item">
+                     Bibliothèque nationale de France
+                  </distributor>
+                  <availability>
+                     <licence target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica">
+                        Domaine public
+                     </licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title>Dans lequel Phileas Fogg descend toute l'admirable vallée du Gange sans même songer à la voir</title>
+                  <biblScope unit="book">Le tour du monde en quatre-vingts jours</biblScope>
+                  <biblScope unit="chapter">XIV</biblScope>
+                  <biblScope unit="page" n="1">1</biblScope>
+               </seriesStmt>
+            </biblFull> 
+         </sourceDesc>
+      </fileDesc>
+      
+      <!-- Informations concernant l'encodage du texte -->
+      <encodingDesc>
+         <projectDesc>
+            <p>Encodage réalisé dans le cadre du cours XML TEI du Master 2 TNAH</p>
+         </projectDesc>
+         <p>Cet encodage a été réalisé à partir de la numérisation disponible sur Gallica et
+            transcrit fidèlement, <!-- à voir à l'exception des césures de fin de ligne propres à l'édition qui furent retirées pour plus de lisibilité et faciliter la recherche textuelle-->,.</p>
+      </encodingDesc>
+      
+      <!-- Aspects non bibliographiques du texte numérique -->
+      <profileDesc>
+         <creation>
+            <date when-iso="1872">1872</date>
+            <country key="FR">France</country>
+            <lang xml:lang="fr"/>
+         </creation>
+         
+         <particDesc>
+            <!--Personnages-->
+            <listPerson type="real">
+               <person xml:id="Fogg">
+                  <persName >Phileas Fogg</persName>
+                  <sex value="M"/>
+               </person>
+               
+               <person xml:id="Passepartout">
+                  <persName>Passepartout</persName>
+                  <sex value="M"/>
+               </person>
+               
+               <person xml:id="Cromarty">
+                  <persName>Sir Francis Cromarty</persName>
+                  <sex value="M"/>
+               </person>
+               
+               <person xml:id="Parsi">
+                  <persName>Le Parsi</persName>
+                  <sex value="M"/>
+               </person>
+               
+               <person xml:id="Kiouni">
+                  <persName> Kiouni</persName>
+                  <note>Eléphant de Phileas Fogg</note>
+               </person>
+               
+               <person xml:id="Aouda">
+                  <persName>Mrs Aouda</persName>
+                  <sex value="F"/>
+                  <note>Veuve du rajah du Bundelkund</note>
+               </person>
+            </listPerson>
+            
+            <!--figures mythologiques-->
+            <listPerson type = "mythic">
+               <person xml:id="Brahma">
+                  <persName ref="https://www.idref.fr/027930874">Brahma</persName>
+               </person>
+               <person xml:id="Shiva">
+                  <persName>Shiva</persName>
+               </person>
+               <person xml:id="Whisnou">
+                  <persName>Whisnou</persName>
+               </person>
+               <person xml:id="Vicvacarma">
+                  <persName>Vicvacarma</persName>
+               </person>
+               
+            </listPerson>
+            
+            <!-- lieux 
+               La pagode de îlargi
+               Madras, à Bombay, à Calcutta
+               station d'Allahabad
+               Allahabad, c'est la cité de Dieu,
+               le Gange et la Jumna fleuves sacrés
+               les légendes du Ramayana
+               Brahma
+               Regent street
+               le roi-poète, Uçaf Uddaul,
+               Kama, dieu d'amour
+               reine d'Ahméhnagara
+             
+            <!-- Plus d'info sur les index de personnages au prochain cours -->
+            <!--</person>-->
+            <!-- </listPerson>-->
+         </particDesc>  
+         
+         <settingDesc>
+            <listPlace>
+               <place xml:id="Inde">
+                  <placeName>Inde</placeName>
+               </place>
+               <place xml:id="Bénarès">
+                  <placeName>Benares</placeName>
+               </place>
+               <place xml:id="Bombay">
+                  <placeName>Bombay</placeName>
+               </place>
+               <place xml:id="Madras">
+                  <placeName>Madras</placeName>
+               </place>
+               <place xml:id="Allahabad">
+                  <placeName>Allahabad</placeName>
+               </place>
+               <place xml:id="Gange">
+                  <placeName>Gange</placeName><persName>Le Parsi</persName>
+                  <note>fleuve sacré</note>
+               </place>
+               <place xml:id="Jumna">
+                  <placeName>Jumna</placeName>
+                  <note>fleuve sacré</note>
+               </place>
+               <place xml:id="Calcutta">
+                  <placeName>Calcutta</placeName>
+               </place>
+               <place xml:id="pagode de Pillaji">
+                  <placeName>pagode de Pillaji
+                  </placeName>
+               </place>
+               <place xml:id="Hong-Kong">
+                  <placeName>Hong-Kong</placeName>
+               </place>
+               <place xml:id="Londres">
+                  <placeName>Londres</placeName>
+               </place>
+               <place xml:id="Regent street">
+                  <placeName>Regent street</placeName>
+               </place>
+               </place>
+               <place xml:id="fort de Chunar">
+                  <placeName type="building">fort de Chunar</placeName>
+               </place>
+               <place xml:id="Golconde">
+                  <placeName ref="Golconde">Golconde</placeName>
+               </place>
+               <place xml:id="Ceylan">
+                  <placeName ref="Ceylan">Ceylan</placeName>
+               </place>
+               
+               Bengale, ni Golgonde ni Gour en ruines, ni Mourshedâbad qui fut autrefois capitale, ni Burdwan, ni Hougly ni Chanderna'gor
+  
+                  
+            </listPlace>
+         </settingDesc>sir Francis
+         
+         </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!--Pour l'ODD explication du choix d'encodage, section 3 div pr : 3 niveaux de div imbriqués pr 3  niveaux de texte. Un épisode contenu ds un roman contenu ds Le Journal Le temps. Une façon de reproduitre l'info bibliographique -->
+         <div n="1">
+            <div n="1.1" type="journal">
+               <cb/><lb/><head rend="Majuscules">Feuilleton du Temps<lb/>du 17 novembre 1872</head>
+               
+               <div n="1.2" type="roman">
+                  <lb/><head rend="Majuscules">Le tour du monde<lb/>en<lb/>quatre-vingts jours</head>
+                  <div n="1.3" type="chapter"><lb/><head rend="Majuscules">XIV<lb/>DANS LEQUEL PHILEAS FOGG<lb/>DESCEND TOUTE L'ADMIRABLE VALLÉE DU GANGE <lb/>SANS MÊME SONGER A LA VOIR.</head>
+                     
+                     <lb/><p>Le hardi enlèvement avait réussi- Une<cb/><lb/> heure anrès, <persName ref="#Passepartout">Passepartout</persName> riait encore de<lb/> son succès. <persName ref="#Cromarty">Sir Francis Cromarty</persName> 
+                        avait serré<lb/>la main de l'intrépide <rs ref="#Passepartout">garçon</rs>. Son maître lui<lb/> avait dit.<said>Bien</said>Ce qui, dans la bouche de<lb/>ce gentleman, équivalait à une haute appro<lb/>bation. 
+                        A quoi <persName ref="#Passepartout">Passepartout</persName> avait répondu<lb/> que tout l'honneur de l'affaire appartenait<lb/> à son maître. Pour lui, il n'avait eu qu'une<lb/> idée « drôle, » et il riait 
+                        en songeant que<lb/>, pendant quelques instants, lui, <persName ref="#Passepartout">Passepar<lb rend="hyphen"/>tout</persName>, ancien gymnaste, ex-sergent de<lb/> pompiers, avait été 
+                        le veuf d'une char<lb/>mante femme, un vieux rajah embaumé!</p>                 
+                     
+                     <p>Quant à la jeune Indienne, elle n'avait pas eu conscience de ce qui s'était passé. Enveloppée dans les couvertures de voyage, elle reposait sur l'un des cacolets.</p>
+                     
+                     <p>Cependant,  <persName ref="Kiouni">l'éléphant</persName>, guidé avec une extrême sûreté par <persName ref="#Parsi">le Parsi</persName> , courait rapidement dans la forèt encore obscure. Une 
+                        Voir le Temps des 6, 7, 8, S), 10, 14, 15 et 16 novembre heure après avoir quitté <placeName ref="pagode de Pillaji">la pagode de Pillaji</placeName>, il se lançait à travers une immense plaine. 
+                        A sept heures, on fit une halte. La jeune femme était toujours dans une prostration complète. Le guide lui fit boire quelques gorgée d'eau et de brandy; mais cette influence stupéfiante qui 
+                        l'accablait devait se prolonger quelque temps encore.</p>
+                     
+                     <p><persName ref="#Cromarty">Sir Francis Cromarty</persName>, qui connaissait les ellets de l'ivresse produite par l'inhalation des vapeurs du chanvre, n'avait aucune inquiétude sur son compte.</p>
+                     
+                     <p>Mais, si le rétablissement de la jeune Indienne ne fit pas question dans l'esprit du brigadier-général, celui-ci se montrait moins rassuré pour l'avenir. 
+                        Il n'hésita pas à dire à <persName ref="#Fogg">Phileas Fogg</persName> que si <persName ref="#Aouda">Mrs. Aouda</persName> restait dans l'<placeName ref="Inde">Inde</placeName>, elle retomberait inévitablement entre 
+                        les mains des bourreaux. Ces énergumènes se tenaient dans toute la péninsule, et certainement, malgré la police anglaise, ils sauraient reprendre leur victime, fût-ce à <placeName ref="Madras">Madras</placeName>, 
+                        à <placeName ref="Bombay">Bombay</placeName>, à <placeName ref="Calcutta">Calcutta</placeName>. 
+                        Et <persName ref="#Cromarty">Sir Francis Cromarty</persName> citait, à l'appui de ce dire, un fait de même nature qui s'était passé récemment. A son avis, la jeune femme ne serait véritablement en sûreté 
+                        qu'après avoir quitté l'<placeName ref="Inde">Inde</placeName>.</p> 
+                     
+                     <p><persName ref="#Fogg">Phileas Fogg</persName> répondit à <persName ref="#Cromarty">Sir Francis </persName> qu'il tiendrait compte de ses observations et qu'il aviserait.</p>
+                     
+                     <p>Vers dix heures, le guide annonçait la station d'<placeName ref="Allahabad">Allahabad</placeName>. Là reprenait la voie interrompue du chemin de fer, dont les trains franchissent, en moins d'un jour et une nuit, 
+                        la distance qui sépare <placeName ref="Allahabad">Allahabad</placeName> de <placeName ref="Calcutta">Calcutta</placeName>.</p>
+                     
+                     <p><persName ref="#Fogg">Phileas Fogg</persName> devait donc arriver à temps pour prendre un paquebot qui partait le lendemain seulement, 25 octobre, à midi, pour <placeName ref="#Hong-Kong">Hong-Kong</placeName>.</p> 
+                     
+                     <p>La jeune femme déposée dans une chambre de la gare, <persName ref="#Passepartout">Passepartout</persName> fut chargé d'aller acheter pour elle divers objets de toilette, robe, châle, fourrures, etc., ce qu'il trouverait. 
+                        Son maître lui ouvrait un crédit illimité.</p>
+                     
+                     <p><persName ref="#Passepartout">Passepartout</persName> partit aussitôt et courut les rues de la ville. <placeName ref="Allahabad">Allahabad</placeName>, c'est la cité de Dieu, l'une des plus vénérées de 
+                        l'<placeName ref="Inde">Inde</placeName>, en raison de ce qu'elle est bâtie au confluent de deux fleuves sacrés, <placeName ref="Gange">le Gange</placeName> et <placeName ref="Jumna">la Jumna</placeName>, 
+                        dont les eaux attirent les pèlerins de toute la péninsule. On sait d'ailleurs que, suivant les légendes du Ramayana, le <placeName ref="Gange">Gange</placeName> prend sa source dans le ciel, d'où, grâce à 
+                        <persName ref="#Brahma">Brahma</persName>, il descend sur la terre.</p>
+                     
+                     <p>Tout en faisant ses emplettes, <persName ref="#Passepartout">Passepartout</persName> eut bientôt vu la ville, autrefois défendue par un fort magnifique, qui est devenu une prison d'Etat. 
+                        Plus de commerce, plus d'industrie dans cette cité, jadis industrielle et commerçante. <persName ref="#Passepartout">Passepartout</persName> qui cherchait vainement un magasin de<cb/><lb/> nouveautés, 
+                        comme s'il eût été dans Regent street, à quelques pas de Farmerand Co. ne trouva que chez un revendeur, vieux juif difflcultueux, les objets dont i^ avait besoin, 
+                        une robe en étoffe écossaise, un vaste manteau, et une magnifique pelisse en peaux de loutres qu'il n'hésita pas à payer soixante-quinze livres (1,875 fr.). Puis, tout triomphant, 
+                        il revint à la gare. </p> 
+                     
+                     <p><persName ref="#Aouda">Mrs. Aouda</persName> commençait à revenir à elle. Cette influence à laquelle les prêtres de <placeName ref="pagode de Pillaji">Pillaji</placeName> l'avaient soumise, 
+                        se dissipait peu à peu, et ses beaux yeux reprenaient toute leur douceur indienne.</p>
+                     
+                     <p>Lorsque <name type="person">le roi-poëte Uçaf Uddaul</name>, célèbre les charmes de la <name type="person">reine d'Ahméhnagara</name>, il s'exprime ainsi : <said>« Sa luisante chevelure, régulièremet di» visée 
+                        en deux parts, encadre les contours » harmonieux de ses joues délicates et blanches, brillantes de [poli et de fraîcheur. » Ses sourcils d'ébène ont la forme et la ^puissance de l'arc de Kama, 
+                        dieu d'amour, » et sous ses longs cils soyeux, dans la pu» pille noire de ses grands yeux limpides, nagent comme dans les lacs sacrés de l'Hi» malaya les reflets les plus purs 
+                        de la » lumière céleste. Fines, égales et blan» ches, ses dents resplendissent entre ses » lèvres souriantes, comme des gouttes de » rosée dans le sein mi-clos d'une fleur de » grenadier.
+                        Ses oreilles mignonnes aux » courbes symétriques, ses mains ver» meilles, ses petits pieds bombés et ten» dres comme les bourgeons du lotus, » brillent de l'éclat des plus belles perles » 
+                        de <placeName ref="Ceylan">Ceylan</placeName>, des plus beaux diamants de » <placeName ref="Golconde">Golconde</placeName>. Sa mince et souple ceinture » qu'une main suffit à enserrer, rehausse » l'élégante 
+                        cambrure de ses reins arrondis et la richesse de son buste où la jeu» nesse en fleur étale ses plus parfaits'tré» sors, et sous les plis soyeux de sa tuni» que, elle semble avoir été modelée en » argent pur de la main divine 
+                        de <persName ref="#Vicvacarma">Vicvacarma</persName>, l'éternel statuaire. »</said></p>
+                     
+                     <p>Mais, sans toute cette amplification poétique, il suffit de dire que <persName ref="#Aouda">Mrs. Aouda</persName>, la veuve du rajah du Bundelkund, était une charmante femme dans toute l'acception européenne 
+                        du mot. Elle parlait l'anglais avec une grande pureté, et le guide n'avait point exagéré en affirmant que cette jeune parsie avait été transformée par l'éducation. 
+                        Cependant, le train allait quitter la sta- tion d'<placeName ref="Allahabad">Allahabad</placeName>. Le Parsi attendait. <persName ref="#Fogg">Mr. Fogg</persName> lui régla son salaire au prix convenu, 
+                        sans le dépasser d'un farthing. 
+                        Ceci étonna un peu <persName ref="#Passepartout">Passepartout</persName>, qui savait tout-ce que son maître devait au dévouement du guide. Le Parsi avait, en effet, risqué volontairement sa vie dans l'affaire 
+                        de <placeName ref="pagode de Pillaji">Pillaji</placeName>, et si, plus tard, les Indous l'apprenaient, il échapperait difficilement à leur vengeance.</p> 
+                     
+                     <p>Restait aussi la question de <persName ref="Kiouni">l'éléphant</persName>.<cb/><lb/>Que ferait-on d'un éléphant acheté si cher? </p>
+                     
+                     <p>Mais <persName ref="#Fogg">Phileas Fogg</persName> avait déjà pris une résolution à cet égard.
+                        <said>« Parsi, </said>dit-il au guide, <said>tu as été serviable et devoué. J'ai payé ton service, mais non ton dévouement. Veux-tu cet éléphant ? Il est à toi. »</said></p>
+                     <p>Les yeux du guide brillèrent. <said>« C'est une fortune que Votre Honneur me donne! </said>s'écria-t-il.
+                        <said>-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName> <said>, et c'est moi qui serai encore ton débiteur.</said> <said>-A la bonne heure!</said> 
+                        s'écria <persName ref="#Passepartout">Passepartout</persName>. <said>Prends, ami Parsi! 
+                        <persName ref="Kiouni">l'éléphant</persName> est un brave et courageux animal »</said> Et, allant à la bête, il lui présenta quelques morceaux de sucre, disant <said>« Tiens, Kiouni, tiens, tiens! »</said></p>
+                     
+                     <p><persName ref="Kiouni">L'éléphant</persName> fit entendre quelques grognements de satisfaction; puis, prenant <persName ref="#Passepartout">Passepartout</persName> par la ceinturé et l'enroulant de sa trompe,
+                        il l'enleva jusqu'à la hauteur de sa tête. 
+                        <persName ref="#Passepartout">Passepartout</persName>, nullement effrayé, fit une bonne caresse à l'animal, qui le replaça doucement à terre, et, à la poignée de trompe de l'honnête 
+                        <persName ref="Kiouni">éléphant</persName>, répondit une vigoureuse poignée de main de l'honnête garçon.</p>
+                     
+                     <p>Quelques instants après, <persName ref="#Fogg">Phileas Fogg</persName>, <persName ref="#Cromarty">sir Francis </persName> et <persName ref="#Passepartout">Passepartout</persName>, installés dans un confortable wagon dont <persName ref="#Aouda">Mrs. Aouda</persName> occupait
+                        la meilleure place, couraient à toute vapeur vers Bénares.</p> 
+                     
+                     <p>Quatre-vingts milles au plus séparent cette ville d'Allahabad, et ils furent franchis en deux heures.</p>
+                     
+                     <p>Pendant ce trajet, la jeune femme revint complètement à elle les vapeurs assoupissantes du hang se dissipèrent. Quel fut son étonnement de se trouver sur le railway, 
+                        dans ce compartiment, recouverte de vêtements européens, au milieu de voyageurs qui lui étaient absolument inconnus!</p>
+                     
+                     <p>Tout d'abord, ses compagnons lui prodiguèrent leurs soins et la ranimèrent avec quelques gouttes de liqueur; puis, le brigadier-général lui raconta son histoire. 
+                        Il insista sur le dévouement de <persName ref="#Fogg">Phileas Fogg</persName> , qui n'avait pas hésité à jouer sa *'ie pour la sauver, et sur le dénoûment de l'aventure, dû à l'audacieuse imagination de 
+                        <persName ref="#Passepartout">Passepartout</persName>.</p>
+                     
+                     <p>Mr. Fogg laissa dire sans prononcer une parole. Passepartout, tout honteux, répétait que <said>« ça n'en valait pas la peine! »</said> </p>
+                     <p><persName ref="#Aouda">Mrs. Aouda</persName> remercia ses sauveurs avec effusion, par ses larmes plus que par ses paroles. Ses beaux yeux, mieux que ses lèvres, furent les interprètes de sa reconnaissance. 
+                        Puis, sa pensée la reportant aux scènes du sutty, ses regards revoyant cette terre indienne où tant de dangers l'attendaient encore, elle fut prise d'un frisson de terreur. </p>
+                     -----------------------
+                     <p><cb/><lb/><persName ref="#Fogg">Phileas Fogg</persName>  comprit ce qui se passait dans lLa jeune femme déposée dans une chambre de la gare, <persName ref="#Passepartout">Passepartout</persName> fut chargé d'aller acheter pour elle divers objets 
+                        de toilette, robe, châle, fourrures, etc., ce qu'il trouverait. Son maître lui ouvrait un crédit illimité.'esprit de <persName ref="#Aouda">Mrs. Aouda</persName>, et pour la rassurer, il lui offrit, très froidement 
+                        d'ailleurs, de la conduire à Honk-Kong, où elle demeurerait jusqu'à ce que cette affaire fut assoupie.</p>
+                     
+                     <p><persName ref="#Aouda">Mrs. Aouda</persName> accepta l'offre avec reconnaissance. Précisément, à Hong-Kong habitait un de ses parents, Parsi comme elle, et l'un des principaux négociants de cette ville, 
+                        qui est absolument anglaise, tout en occupant un point de la côte chinoise.</p>
+                     
+                     <p>A midi et demi, le train s'arrêtait à la station de Bénarès. Les lémendes brahmaniques affirment que cette ville occupe l'emplacement de l'ancienne Casi, qui était autrefois 
+                        suspendue dans l'espace, entre le zénith et le nadir, comme la tombe de Mahomet. Mais, à cette époque plus réaliste, Bénarès, l'Athènes de l'Inde au dire des orientalistes, 
+                        reposait tout prosaïquement sur le sol, et <persName ref="#Passepartout">Passepartout</persName> put un instant entrevoir ses maisons de brique, ses huttes en clayonnage, qui lui donnaient un aspect absolument désolé, 
+                        sans aucune couleur locale.</p>
+                     
+                     <p>C'était là que devait s'arrêter sir Francis Cromarty. Les troupes qu'il rejoignait campaient à quelques milles au nord de la ville. Le brigadier-général fit donc ses adieux 
+                        à <persName ref="#Fogg">Phileas Fogg</persName> , lui souhaitant tout le succès possible, et exprimant le vœu qu'il recommençât ce voyage d'une façon moins originale, mais plus profitable. 
+                        <persName ref="#Fogg">Mr Fogg</persName> pressa légèrement les doigts de son compagnon. Les compliments de Mrs. Aouda furent plus affectueux. Jamais elle n'oublierait ce qu'elle devait 
+                        à sir Francis Cromarty. Quant à Passepartout, il fut honoré d'une vraie poignée de mains de la part du brigadier- général tout ému, il se demanda où et quand il pourrait bien se dévouer pour lui. Puis on se sé-
+                        para</p>
+                     
+                     <p>A partir de Bénarès, la voie ferrée suivait en partie la vallée du Gange. A travers les vitres du wagon, par un temps assez clair, apparaissait le paysage varié du Béhar, 
+                        des montagnes cousertes de verdure, des champs d'orge, de maïs et de froment, des rios et des étangs peuplés d'alligators verdâtres, des villages bien entretenus, des forêts 
+                        encore verdoyantes. Quelques éléphants, des zébus à grosse bosse, venaient se baigner dans les eaux du fleuve sacré, et aussi, malgré la saison avancée et la température déjà 
+                        froide, des bandes d'Indous des deux sexes, qui accomplissaieut pieusement leurs saintes ablutions. Ces fidèles, ennemis acharnés du boudhisme, sont sectateurs fervents de la 
+                        religion brahmanique qui s'incarne en ces trois personnes Whisnou, la divinité solaire, Shiva, la personnification divine des forces naturelles, et Brahma, le maî-<cb/> <lb/>
+                        tre suprême des prêtres et des Iégïé& teurs. Mais Brahma, Shiva et Whisnou. de quel œil devaient-ils considérer cette' Inde, maintenant « britannisée, » quand- quelque steam-boat 
+                        passait en hennissant et troublait les eaux consacrées du Gange, effarouchant les mouettes qui volaient à sa surface, les tortues qui pullulaient sur ses bords, et les dévots étendus 
+                        au long de ses rives!</p>
+                     
+                     <p>Tout ce panorama passa comme un éclair et souvent un nuage de vapeur blanche en cacha les détails A peine les voyageurs purent -ils entreoir le fort de Chunar <placeName
+                        type="building">fort de Chunar</placeName>, à vingt milles" au sud-est de Bénarès, ancienne forteresse des rajahs du Béhar, Ghazepour et ses im.portantes fabriques d'eau de rose, le tomeau de lord Coiwallis 
+                        qui s'élève sur la rive gauche du Gange, la ville fortifiée de Buxar, Patna, grande cité industrielle et commerçante, ou se tient le principal marché d'opium de lTiide, Monghir, ville nlus qu'européenne, anglaise comme MaùcSes-. 
+                        ter ou Birmingham, renommée pour seq fonderies de fer ses fabriques de taillanderie et d'armes kanches, et dont les hautes cheminées encrassaient d'une fumée noire le ciel de Brahma, 
+                        un véritablffS de poing dans le pays du rêve !</p>
+                     
+                     <p>Puis la nuit vint, et, -au milieu des hululements des tigres, des ours, des loups qui fuyaient devant la locomotive, le train passa 
+                        à toute vitesse, et on ne vit plus rien des merveilles du Bengale, ni Golgonde ni Gour en ruines, ni Mourshedâbad qui fut autrefois capitale, ni Burdwan, ni Hougly ni Chanderna'gor, 
+                        ce point fran-çais du territoire indien, sur lequel Passe-partout eût été fier de voir flotter le (11'8. peau de sa patrie!</p>
+                     
+                     <p>Enfin, à sept heures du matin, Caléutta était atteint. Le paquebot, en fiSffiS pour &"K?,ng' ne levait l'anSre qu'à midi. Phileas Fogg avait donc cinq ^?rès devant lui.</p>
+                     
+                     <p>D'après son itinéraire, ce gentleman devait arriver dans la capitale des iodes le' 2o octobre, vingt-trois jours après avoir r quitté Londres, et il y arrivait au jour fixé. 
+                        Il n'avait donc n'y retard ni avancë. Malheureusement, les deux jours gagnés par lui entre Londres et Bombay avaient^ perdus, on sait comment, dans cette traversée de la péninsule 
+                        indienne, mais il IrettaitK61' que <persName ref="#Fogg">Phileas Fogg</persName>,ne les re-grettait pas.</p>
+                     
+                     <signed>
+                        <lb/><persName ref="#JV">JULES VERNE</persName>
+                        <lb/>(A suivre.)</signed>
+                     
+                     </p>
+                     
+                     (A suivrai. 
+                  </div>
+               </div>    
+            </div>
+      </body>
+   </text>
+</TEI>
