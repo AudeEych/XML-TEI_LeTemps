@@ -152,18 +152,19 @@
                <person xml:id="Vicvacarma">
                   <persName>Vicvacarma</persName>
                </person>
+               <person xml:id="Kama">
+                  <persName>Kama</persName>
+                  <note>Dieu d'amour
+               </person>
                
             </listPerson>
             
             <!-- lieux 
                La pagode de îlargi
-               Madras, à Bombay, à Calcutta
-               station d'Allahabad
-               Allahabad, c'est la cité de Dieu,
-               le Gange et la Jumna fleuves sacrés
+               
+            
                les légendes du Ramayana
-               Brahma
-               Regent street
+              
                le roi-poète, Uçaf Uddaul,
                Kama, dieu d'amour
                reine d'Ahméhnagara
@@ -224,8 +225,29 @@
                <place xml:id="Ceylan">
                   <placeName ref="Ceylan">Ceylan</placeName>
                </place>
+            <place xml:id="Bundelkund">
+                  <placeName ref="Bundelkund">Ceylan</placeName>
+               </place>
+            <place xml:id="Gour">
+                  <placeName ref="Gour">Gour</placeName>
+               </place>
+            <place xml:id="Bengale">
+                  <placeName ref="Bengale">Bengale</placeName>
+               </place>
+            <place xml:id="Murshidabad">
+                  <placeName ref="Murshidabad">Mourshedâbad</placeName>
+               </place>
+            <place xml:id="Burdwan">
+                  <placeName ref="Burdwan">Burdwan</placeName>
+               </place>
+             <place xml:id="Hougly">
+                  <placeName ref="Hougly">Houglyn</placeName>
+               </place>
+             <place xml:id="Chandernagor">
+                  <placeName ref="Chandernagor">Chandernagor</placeName>
+               </place>
+            
                
-               Bengale, ni Golgonde ni Gour en ruines, ni Mourshedâbad qui fut autrefois capitale, ni Burdwan, ni Hougly ni Chanderna'gor
   
                   
             </listPlace>
