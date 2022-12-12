@@ -154,7 +154,7 @@
                </person>
                <person xml:id="Kama">
                   <persName>Kama</persName>
-                  <note>Dieu d'amour
+                  <note type="explication">Dieu d'amour</note>
                </person>
                
             </listPerson>
@@ -177,87 +177,87 @@
          <settingDesc>
             <listPlace>
                <place xml:id="Inde">
-                  <placeName>Inde</placeName>
+                  <placeName key="IN">Inde</placeName>
                </place>
                <place xml:id="Bénarès">
-                  <placeName>Benares</placeName>
+                  <placeName key="IN" >Benares</placeName>
                </place>
                <place xml:id="Bombay">
-                  <placeName>Bombay</placeName>
+                  <placeName key="IN">Bombay</placeName>
                </place>
                <place xml:id="Madras">
-                  <placeName>Madras</placeName>
+                  <placeName key="IN">Madras</placeName>
                </place>
                <place xml:id="Allahabad">
-                  <placeName>Allahabad</placeName>
+                  <placeName key="IN">Allahabad</placeName>
                </place>
                <place xml:id="Gange">
-                  <placeName>Gange</placeName><persName>Le Parsi</persName>
+                  <placeName key="IN">Gange</placeName><persName>Le Parsi</persName>
                   <note>fleuve sacré</note>
                </place>
                <place xml:id="Jumna">
-                  <placeName>Jumna</placeName>
+                  <placeName key="IN">Jumna</placeName>
                   <note>fleuve sacré</note>
                </place>
                <place xml:id="Calcutta">
-                  <placeName>Calcutta</placeName>
+                  <placeName key="IN">Calcutta</placeName>
                </place>
                <place xml:id="pagode de Pillaji">
-                  <placeName>pagode de Pillaji
-                  </placeName>
+                  <placeName key="IN">pagode de Pillaji</placeName>
                </place>
                <place xml:id="Hong-Kong">
-                  <placeName>Hong-Kong</placeName>
+                  <placeName key="CN">Hong-Kong</placeName>
                </place>
                <place xml:id="Londres">
-                  <placeName>Londres</placeName>
+                  <placeName key="GB">Londres</placeName>
+                  <location type="geopolitical"></location>
+                  <country>Grande Bretagne</country>
+                  
                </place>
                <place xml:id="Regent street">
-                  <placeName>Regent street</placeName>
+                  <placeName key="GB">Regent street</placeName>
                </place>
                </place>
                <place xml:id="fort de Chunar">
-                  <placeName type="building">fort de Chunar</placeName>
+                  <placeName key="IN" type="building">fort de Chunar</placeName>
                </place>
                <place xml:id="Golconde">
-                  <placeName ref="Golconde">Golconde</placeName>
+                  <placeName key="IN">Golconde</placeName>
                </place>
                <place xml:id="Ceylan">
-                  <placeName ref="Ceylan">Ceylan</placeName>
+                  <placeName key="LK" type="country">Ceylan</placeName>
                </place>
             <place xml:id="Bundelkund">
-                  <placeName ref="Bundelkund">Ceylan</placeName>
+               <placeName key="IN" type="région">Bundelkund</placeName>
                </place>
             <place xml:id="Gour">
-                  <placeName ref="Gour">Gour</placeName>
+               <placeName key="IN">Gour</placeName>
                </place>
             <place xml:id="Bengale">
-                  <placeName ref="Bengale">Bengale</placeName>
+               <placeName key="IN">Bengale</placeName>
                </place>
             <place xml:id="Murshidabad">
-                  <placeName ref="Murshidabad">Mourshedâbad</placeName>
+               <placeName key="IN"">Mourshedâbad</placeName>
                </place>
             <place xml:id="Burdwan">
-                  <placeName ref="Burdwan">Burdwan</placeName>
+               <placeName key="IN">Burdwan</placeName>
                </place>
              <place xml:id="Hougly">
-                  <placeName ref="Hougly">Houglyn</placeName>
+                <placeName key="IN" type="district">Houglyn</placeName>
                </place>
              <place xml:id="Chandernagor">
-                  <placeName ref="Chandernagor">Chandernagor</placeName>
+                <placeName key="IN">Chandernagor</placeName>
                </place>
-            
-               
-  
                   
             </listPlace>
-         </settingDesc>sir Francis
-         
+            
+         </settingDesc>
          </fileDesc>
    </teiHeader>
    <text>
       <body>
-         <!--Pour l'ODD explication du choix d'encodage, section 3 div pr : 3 niveaux de div imbriqués pr 3  niveaux de texte. Un épisode contenu ds un roman contenu ds Le Journal Le temps. Une façon de reproduitre l'info bibliographique -->
+         <!--Pour l'ODD explication du choix d'encodage, section 3 div pr : 3 niveaux de div imbriqués pr 3  niveaux de texte. 
+            Un épisode contenu ds un roman contenu ds Le Journal Le temps. Une façon de reproduitre l'info bibliographique -->
          <div n="1">
             <div n="1.1" type="journal">
                <cb/><lb/><head rend="Majuscules">Feuilleton du Temps<lb/>du 17 novembre 1872</head>
@@ -266,37 +266,45 @@
                   <lb/><head rend="Majuscules">Le tour du monde<lb/>en<lb/>quatre-vingts jours</head>
                   <div n="1.3" type="chapter"><lb/><head rend="Majuscules">XIV<lb/>DANS LEQUEL PHILEAS FOGG<lb/>DESCEND TOUTE L'ADMIRABLE VALLÉE DU GANGE <lb/>SANS MÊME SONGER A LA VOIR.</head>
                      
-                     <lb/><p>Le hardi enlèvement avait réussi- Une<cb/><lb/> heure anrès, <persName ref="#Passepartout">Passepartout</persName> riait encore de<lb/> son succès. <persName ref="#Cromarty">Sir Francis Cromarty</persName> 
-                        avait serré<lb/>la main de l'intrépide <rs ref="#Passepartout">garçon</rs>. Son maître lui<lb/> avait dit.<said>Bien</said>Ce qui, dans la bouche de<lb/>ce gentleman, équivalait à une haute appro<lb/>bation. 
-                        A quoi <persName ref="#Passepartout">Passepartout</persName> avait répondu<lb/> que tout l'honneur de l'affaire appartenait<lb/> à son maître. Pour lui, il n'avait eu qu'une<lb/> idée « drôle, » et il riait 
-                        en songeant que<lb/>, pendant quelques instants, lui, <persName ref="#Passepartout">Passepar<lb rend="hyphen"/>tout</persName>, ancien gymnaste, ex-sergent de<lb/> pompiers, avait été 
+                     <lb/><p>Le hardi enlèvement avait réussi- Une<cb/><lb/> heure après, <persName ref="#Passepartout">Passepartout</persName> riait encore de<lb/> 
+                        son succès. <persName ref="#Cromarty">Sir Francis Cromarty</persName> avait serré<lb/>la main de l'intrépide <rs ref="#Passepartout">garçon</rs>. 
+                        Son maître lui<lb/> avait dit.<said>Bien</said>Ce qui, dans la bouche de<lb/>ce gentleman, équivalait à une haute appro<lb/>bation. 
+                        A quoi <persName ref="#Passepartout">Passepartout</persName> avait répondu<lb/> que tout l'honneur de l'affaire appartenait<lb/> à son maître. 
+                        Pour lui, il n'avait eu qu'une<lb/> idée « drôle, » et il riait en songeant que<lb/>, pendant quelques instants, lui, 
+                        <persName ref="#Passepartout">Passepar<lb rend="hyphen"/>tout</persName>, ancien gymnaste, ex-sergent de<lb/> pompiers, avait été 
                         le veuf d'une char<lb/>mante femme, un vieux rajah embaumé!</p>                 
                      
-                     <p>Quant à la jeune Indienne, elle n'avait pas eu conscience de ce qui s'était passé. Enveloppée dans les couvertures de voyage, elle reposait sur l'un des cacolets.</p>
+                     <p>Quant à la jeune Indienne, elle n'avait pas eu conscience de ce qui s'était passé. Enveloppée dans les couvertures de voyage, elle 
+                        reposait sur l'un des cacolets.</p>
                      
-                     <p>Cependant,  <persName ref="Kiouni">l'éléphant</persName>, guidé avec une extrême sûreté par <persName ref="#Parsi">le Parsi</persName> , courait rapidement dans la forèt encore obscure. Une 
-                        Voir le Temps des 6, 7, 8, S), 10, 14, 15 et 16 novembre heure après avoir quitté <placeName ref="pagode de Pillaji">la pagode de Pillaji</placeName>, il se lançait à travers une immense plaine. 
-                        A sept heures, on fit une halte. La jeune femme était toujours dans une prostration complète. Le guide lui fit boire quelques gorgée d'eau et de brandy; mais cette influence stupéfiante qui 
-                        l'accablait devait se prolonger quelque temps encore.</p>
+                     <p>Cependant,  <persName ref="Kiouni">l'éléphant</persName>, guidé avec une extrême sûreté par <persName ref="#Parsi">le Parsi</persName>, 
+                        courait rapidement dans la forèt encore obscure. <note type="note de bas de page">Une Voir le Temps des 6, 7, 8, 9, 10, 14, 15 et 16 novembre</note> heure après 
+                        avoir quitté <placeName ref="pagode de Pillaji">la pagode de Pillaji</placeName>, il se lançait à travers une immense plaine. 
+                        A sept heures, on fit une halte. La jeune femme était toujours dans une prostration complète. Le guide lui fit boire quelques 
+                        gorgée d'eau et de brandy; mais cette influence stupéfiante qui l'accablait devait se prolonger quelque temps encore.</p>
                      
-                     <p><persName ref="#Cromarty">Sir Francis Cromarty</persName>, qui connaissait les ellets de l'ivresse produite par l'inhalation des vapeurs du chanvre, n'avait aucune inquiétude sur son compte.</p>
+                     <p><persName ref="#Cromarty">Sir Francis Cromarty</persName>, qui connaissait les ellets de l'ivresse produite par l'inhalation 
+                        des vapeurs du chanvre, n'avait aucune inquiétude sur son compte.</p>
                      
-                     <p>Mais, si le rétablissement de la jeune Indienne ne fit pas question dans l'esprit du brigadier-général, celui-ci se montrait moins rassuré pour l'avenir. 
-                        Il n'hésita pas à dire à <persName ref="#Fogg">Phileas Fogg</persName> que si <persName ref="#Aouda">Mrs. Aouda</persName> restait dans l'<placeName ref="Inde">Inde</placeName>, elle retomberait inévitablement entre 
-                        les mains des bourreaux. Ces énergumènes se tenaient dans toute la péninsule, et certainement, malgré la police anglaise, ils sauraient reprendre leur victime, fût-ce à <placeName ref="Madras">Madras</placeName>, 
-                        à <placeName ref="Bombay">Bombay</placeName>, à <placeName ref="Calcutta">Calcutta</placeName>. 
-                        Et <persName ref="#Cromarty">Sir Francis Cromarty</persName> citait, à l'appui de ce dire, un fait de même nature qui s'était passé récemment. A son avis, la jeune femme ne serait véritablement en sûreté 
-                        qu'après avoir quitté l'<placeName ref="Inde">Inde</placeName>.</p> 
+                     <p>Mais, si le rétablissement de la jeune Indienne ne fit pas question dans l'esprit du brigadier-général, celui-ci se montrait moins rassuré 
+                        pour l'avenir. Il n'hésita pas à dire à <persName ref="#Fogg">Phileas Fogg</persName> que si <persName ref="#Aouda">Mrs. Aouda</persName> 
+                        restait dans l'<placeName ref="Inde">Inde</placeName>, elle retomberait inévitablement entre les mains des bourreaux. Ces énergumènes 
+                        se tenaient dans toute la péninsule, et certainement, malgré la police anglaise, ils sauraient reprendre leur victime, fût-ce 
+                        à <placeName ref="Madras">Madras</placeName>, à <placeName ref="Bombay">Bombay</placeName>, à <placeName ref="Calcutta">Calcutta</placeName>. 
+                        Et <persName ref="#Cromarty">Sir Francis Cromarty</persName> citait, à l'appui de ce dire, un fait de même nature qui s'était passé récemment. 
+                        A son avis, la jeune femme ne serait véritablement en sûreté qu'après avoir quitté l'<placeName ref="Inde">Inde</placeName>.</p> 
                      
-                     <p><persName ref="#Fogg">Phileas Fogg</persName> répondit à <persName ref="#Cromarty">Sir Francis </persName> qu'il tiendrait compte de ses observations et qu'il aviserait.</p>
+                     <p><persName ref="#Fogg">Phileas Fogg</persName> répondit à <persName ref="#Cromarty">Sir Francis </persName> qu'il tiendrait compte de ses 
+                        observations et qu'il aviserait.</p>
                      
-                     <p>Vers dix heures, le guide annonçait la station d'<placeName ref="Allahabad">Allahabad</placeName>. Là reprenait la voie interrompue du chemin de fer, dont les trains franchissent, en moins d'un jour et une nuit, 
-                        la distance qui sépare <placeName ref="Allahabad">Allahabad</placeName> de <placeName ref="Calcutta">Calcutta</placeName>.</p>
+                     <p>Vers dix heures, le guide annonçait la station d'<placeName ref="Allahabad">Allahabad</placeName>. Là reprenait la voie interrompue du 
+                        chemin de fer, dont les trains franchissent, en moins d'un jour et une nuit, la distance qui sépare <placeName ref="Allahabad">Allahabad</placeName> de <placeName ref="Calcutta">Calcutta</placeName>.</p>
                      
-                     <p><persName ref="#Fogg">Phileas Fogg</persName> devait donc arriver à temps pour prendre un paquebot qui partait le lendemain seulement, 25 octobre, à midi, pour <placeName ref="#Hong-Kong">Hong-Kong</placeName>.</p> 
+                     <p><persName ref="#Fogg">Phileas Fogg</persName> devait donc arriver à temps pour prendre un paquebot qui partait le lendemain seulement, 
+                        25 octobre, à midi, pour <placeName ref="#Hong-Kong">Hong-Kong</placeName>.</p> 
                      
-                     <p>La jeune femme déposée dans une chambre de la gare, <persName ref="#Passepartout">Passepartout</persName> fut chargé d'aller acheter pour elle divers objets de toilette, robe, châle, fourrures, etc., ce qu'il trouverait. 
-                        Son maître lui ouvrait un crédit illimité.</p>
+                     <p>La jeune femme déposée dans une chambre de la gare, <persName ref="#Passepartout">Passepartout</persName> fut chargé d'aller acheter 
+                        pour elle divers objets de toilette, robe, châle, fourrures, etc., ce qu'il trouverait. Son maître lui ouvrait un crédit illimité.</p>
                      
                      <p><persName ref="#Passepartout">Passepartout</persName> partit aussitôt et courut les rues de la ville. <placeName ref="Allahabad">Allahabad</placeName>, c'est la cité de Dieu, l'une des plus vénérées de 
                         l'<placeName ref="Inde">Inde</placeName>, en raison de ce qu'elle est bâtie au confluent de deux fleuves sacrés, <placeName ref="Gange">le Gange</placeName> et <placeName ref="Jumna">la Jumna</placeName>, 
@@ -392,8 +400,8 @@
                         un véritablffS de poing dans le pays du rêve !</p>
                      
                      <p>Puis la nuit vint, et, -au milieu des hululements des tigres, des ours, des loups qui fuyaient devant la locomotive, le train passa 
-                        à toute vitesse, et on ne vit plus rien des merveilles du Bengale, ni Golgonde ni Gour en ruines, ni Mourshedâbad qui fut autrefois capitale, ni Burdwan, ni Hougly ni Chanderna'gor, 
-                        ce point fran-çais du territoire indien, sur lequel Passe-partout eût été fier de voir flotter le (11'8. peau de sa patrie!</p>
+                        à toute vitesse, et on ne vit plus rien des merveilles du Bengale, ni Golgonde ni Gour en ruines, ni Mourshedâbad qui fut autrefois capitale, ni Burdwan, 
+                        ni Hougly ni Chanderna'gor, ce point fran-çais du territoire indien, sur lequel Passe-partout eût été fier de voir flotter le (11'8. peau de sa patrie!</p>
                      
                      <p>Enfin, à sept heures du matin, Caléutta était atteint. Le paquebot, en fiSffiS pour &"K?,ng' ne levait l'anSre qu'à midi. Phileas Fogg avait donc cinq ^?rès devant lui.</p>
                      
