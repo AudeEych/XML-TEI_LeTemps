@@ -101,8 +101,8 @@
          </creation>
          
          <particDesc>
-            <!--Personnages réels-->
-            <listPerson type="real">
+            <!--Personnages propres à l'histoire-->
+            <listPerson type="fictional">
                <person xml:id="Fogg">
                   <persName >Phileas Fogg</persName>
                   <sex value="M"/>
@@ -128,6 +128,7 @@
                
                <person xml:id="Kiouni">
                   <persName>Kiouni</persName>
+                  <sex value="None"/>
                   <note>Elephant qui transporte <persName ref="Fogg">Phileas Fogg</persName> et ses compagnons jusqu'à <placeName ref="Allahabad">Allahabad</placeName></note>
                </person>
                
@@ -137,11 +138,25 @@
                   <note>Indienne « de race parsie » et veuve du rajah du <placeName ref="Bundelkund">Bundelkund</placeName></note>
                </person>
                
+            </listPerson>
+               
+               <!--Personnages réels-->
+               <listPerson type = "real">
                <person xml:id="Cornwallis">
                   <persName><roleName type="nobility">Lord</roleName>Cornwallis</persName>
                   <sex value="M"/>
                   <note>Gouverneur général de l'<placeName ref="Inde">Inde </placeName>(1786 – 1793)</note>
                </person>
+                  
+                  <person xml:id="Uddaul">
+                     <persName>Uçaf Uddaul</persName>
+                     <note type="explication">roi-poète</note>
+                     <note type="explication">Probablement une référence à Asaf-ud-Daula, le Nawab wazir d'Oudh (1748–1797) d'après Alex Kirstukas / source http://www.verniana.org/volumes/11/HTML/Phileas.html#endnote-23</note>
+                  </person>
+                  
+                  <person xml:id="Mahomet">
+                     <persName>Mahomet</persName>
+                  </person>
                
             </listPerson>
             
@@ -166,21 +181,15 @@
                   <persName>Kama</persName>
                   <note type="explication">Dieu d'amour</note>
                </person>
-               <person xml:id="Uddaul">
-                  <persName>Uçaf Uddaul</persName>
-                  <note type="explication">roi-poète</note>
-                  <note type="explication">Probablement une référence à Asaf-ud-Daula (1748–1797) d'après Alex Kirstukas / source http://www.verniana.org/volumes/11/HTML/Phileas.html#endnote-23</note>
-               </person>
-               <person xml:id="Mahomet">
-                  <persName>Mahomet</persName>
-               </person>
+               
+               
             </listPerson>
             
             
          </particDesc>  
          
          <settingDesc>
-            <!--Lieux situés en Inde où se déroule l'intrigue-->
+            <!--Lieux situés en Inde, où se déroule l'intrigue-->
             <listPlace>
                <place xml:id="Inde">
                   <placeName>
