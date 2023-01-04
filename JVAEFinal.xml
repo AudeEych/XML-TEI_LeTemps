@@ -4,7 +4,7 @@
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
-      <!-- Description biblio fichier numérique et la source -->
+      <!-- Description bibliographique du fichier numérique et de la source -->
       <fileDesc>
          <titleStmt>
             <title>LE TOUR DU MONDE EN QUATRE-VINGTS JOURS</title>
@@ -118,7 +118,9 @@
                <person xml:id="Cromarty">
                   <persName><roleName type="honorific">Sir</roleName>Sir Francis Cromarty</persName>
                   <sex value="M"/>
-                  <note>Brigadier-général de l'armée britannique et ami de <persName ref="Fogg">Phileas Fogg</persName>.</note>
+                  <note>Brigadier-général de l'armée britannique et partenaire de <persName ref="Fogg">Phileas Fogg</persName> 
+                     pendant la traversee de Suez à Bombay.
+                  </note>
                </person>
                
                <person xml:id="Parsi">
@@ -128,8 +130,8 @@
                      l'éléphant <persName ref="#Kiouni">l'éléphant</persName>.</note>
                </person>
                
-               <person xml:id="Kiouni">
-                  <name type="animal">Kiouni</name>
+               <person xml:id="Kiouni"> <!--solution choisie pr l'animal si c'étaitr généralisée ce serait un point à améliorer-->
+                  <persName type="animal">Kiouni</persName>
                   <sex value="M"/>
                   <note>Elephant qui transporte <persName ref="Fogg">Phileas Fogg</persName> et ses compagnons jusqu'à 
                      <placeName ref="Allahabad">Allahabad</placeName></note>
@@ -138,8 +140,8 @@
                <person xml:id="Aouda">
                   <persName><roleName type="honorific">Mrs</roleName>Mrs Aouda</persName>
                   <sex value="F"/>
-                  <note>Indienne « de race parsie » veuve du rajah du <placeName ref="Bundelkund">Bundelkund</placeName> et  
-                     protégée de <persName ref="Fogg">Phileas Fogg</persName> qui l'a sauvée du bûcher.</note>
+                  <note>Indienne « de race parsie » veuve du rajah du <placeName ref="#Bundelkund">Bundelkund</placeName> et  
+                     protégée de <persName ref="#Fogg">Phileas Fogg</persName> qui l'a sauvée du bûcher.</note>
                </person>
                
             </listPerson>
@@ -157,6 +159,11 @@
                      <note type="explication">roi-poète</note>
                      <note type="explication" target="http://www.verniana.org/volumes/11/HTML/Phileas.html#endnote-23">
                         Probablement une référence à Asaf-ud-Daula, le Nawab wazir d'Oudh (1748–1797) d'après Alex Kirstukas</note>
+                  </person>
+                  
+                  <person xml:id="Ahmehnagara">
+                     <persName><roleName type="nobility">Reine</roleName>d'Ahméhnagara</persName>
+                     <note type="explication">Probablement un personnage de fiction créé par Jules Verne</note>
                   </person>
                   
                   <person xml:id="Mahomet">
@@ -182,13 +189,15 @@
                </person>
                <person xml:id="Vicvacarma">
                   <persName>Vicvacarma</persName>
+                  <note type="explication">Probablement Vishnu sous la forme du grand bâtisseur Vicvakarma</note>
                </person>
+               
                <person xml:id="Kama">
                   <persName>Kama</persName>
                   <note type="explication">Dieu d'amour</note>
                </person>
                
-               
+    
             </listPerson>
             
             
@@ -216,6 +225,7 @@
                         <settlement type="city"/>
                         <postCode source="GeoNames"/>
                      </address>
+                     <note>Bénarès ou Varanasi en hindi, située dans l'Uttar Pradesh, l'État du Nord de l'<placeName ref="#Inde">Inde</placeName>,  est la ville la plus sacrée de l'hindouisme</note>
                   </placeName>
                </place>
                
@@ -227,6 +237,7 @@
                         <settlement type="city"/>
                         <postCode source="GeoNames">1275339</postCode>
                      </address>
+                     <note>Bombay ou Mumbaia en marathi est la capitale du Maharashtra, État de l'ouest de l'<placeName ref="#Inde">Inde</placeName>.</note>
                   </placeName>
                </place>
                
@@ -238,6 +249,7 @@
                         <settlement type="city"/>
                         <postCode source="GeoNames">1255053</postCode>
                      </address>
+                     <note>Madras ou Chennaib en tamoul ) est la capitale de l'État du Tamil Nadu dans l'<placeName ref="#Inde">Inde</placeName> du Sud</note>
                   </placeName>
                </place>
                
@@ -249,6 +261,7 @@
                         <settlement type="city"/>
                         <postCode source="GeoNames">1278994</postCode>
                      </address>
+                     <note>Allahabad, aujourd'hui Prayagraj en hindi, est une ville de l’État d’Uttar Pradesh dans l'<placeName ref="#Inde">Inde</placeName> du sud </note>
                   </placeName>
                </place>
                
@@ -258,8 +271,8 @@
                      <address>
                         <country key="IN"/>
                         <settlement type="fleuve"/>
-                        
                      </address>
+                     <note>Fleuve de la plaine indo-gangétique, au nord de l'<placeName ref="#Inde">Inde</placeName> et la plus sainte des sept rivières sacrées de ce pays. </note>
                   </placeName>
                   <note>fleuve sacré</note>
                </place>
@@ -272,6 +285,8 @@
                         <settlement type="fleuve"/>
                         <postCode source="GeoNames">1175591</postCode>
                      </address>
+                     <note>La Yamuna en hindi, également appelée Jumna dans les dialectes locaux — est un affluent du <placeName ref="#Gange">Gange</placeName> 
+                        et l'une des sept rivières sacrées de l'<placeName ref="#Inde">Inde</placeName>.</note>
                   </placeName>
                </place>
                
@@ -283,6 +298,8 @@
                         <settlement type="city"/>
                         <postCode source="GeoNames">1275004</postCode>
                      </address>
+                     <note>Calcutta est la capitale du Bengale-Occidental, état du Nord est de l'<placeName ref="#Inde">Inde</placeName>.
+                        Elle a été la capitale des Indes britanniques de 1773 à 1912</note>
                   </placeName>
                </place>
                
@@ -294,6 +311,9 @@
                         <settlement type="building"/>
                         <postCode source="GeoNames">unknown</postCode>
                      </address>
+                     <note>Lieu de culte probablement inventé par <persName ref="#JV">Jules Verne</persName>, où <persName ref="#Fogg">Phileas Fogg</persName> 
+                        et ses compagnons ont sauvé la vie à <persName ref="#Aouda">Mrs Aouda</persName> qui y était victime 
+                        d'un sacrifice humain dans un épisode précédent</note>
                   </placeName>
                </place>
                
@@ -305,6 +325,8 @@
                         <settlement type="building"/>
                         <postCode source="GeoNames">1273923</postCode>
                      </address>
+                     <note>situé dans le district de Mirzapur de l'Uttar Pradesh, en Inde il est le théâtre de l'histoire de l'Inde
+                       de - 56 avant J.-C jusqu'à l'indépendance de l'<placeName ref="#Inde">Inde</placeName> en 1947 </note>
                   </placeName>
                </place>
                
@@ -370,7 +392,7 @@
                      <address>
                         <country key="IN"/>
                         <settlement type="district"/>
-                        <postCode source="GeoNames"> 1277029</postCode>
+                        <postCode source="GeoNames">1277029</postCode>
                      </address>
                   </placeName>
                </place>
@@ -414,7 +436,7 @@
                      <name>Béhar</name>
                      <address>
                         <settlement type="district"/>
-                        <postCode source="GeoNames"> 1275716</postCode>
+                        <postCode source="GeoNames">1275716</postCode>
                      </address>
                      
                   </placeName>
@@ -425,7 +447,7 @@
                      <name>Ghazepour</name>
                      <address>
                         <settlement type="city"/>
-                        <postCode source="GeoNames"> 1271306</postCode>
+                        <postCode source="GeoNames">1271306</postCode>
                      </address>
                      
                   </placeName>
@@ -436,7 +458,7 @@
                      <name>Patna</name>
                      <address>
                         <settlement type="city"/>
-                        <postCode source="GeoNames"> 1260086</postCode>
+                        <postCode source="GeoNames">1260086</postCode>
                      </address>
                   </placeName>
                </place>
@@ -524,9 +546,9 @@
                         Enveloppée dans les couvertures de voyage, elle reposait sur l'un des cacolets.</p>
                      
                      <p>Cependant, <name type="animal" ref="#Kiouni">l'éléphant</name>, guidé avec une extrême sûreté par 
-                        <persName ref="#Parsi">le Parsi</persName>, courait rapidement dans la forèt encore obscure. 
+                        <persName ref="#Parsi">le Parsi</persName>, courait rapidement dans la forêt encore obscure. 
                         Une <note type="note_bas_de_page">Voir le Temps des 6, 7, 8, 9, 10, 14, 15 et 16 novembre</note> 
-                        <cb/>heure après avoir quitté la<placeName ref="#Pillaji">pagode de Pillaji</placeName>, <rs type="person" ref="#Kiouni">il</rs> 
+                        <cb/>heure après avoir quitté la<placeName ref="#Pillaji">pagode de Pillaji</placeName>, il 
                         se lançait à travers une immense plaine. A sept heures, on fit une halte. La <rs type="person" ref="#Aouda">jeune femme</rs> 
                         était toujours dans une prostration complète. Le <rs type="person" ref="#Parsi">guide</rs> lui fit boire quelques 
                         gorgée d'eau et de brandy; mais cette influence stupéfiante qui <rs type="person" ref="#Aouda">l'</rs>accablait 
@@ -544,7 +566,7 @@
                         <placeName ref="#Bombay">Bombay</placeName>, à <placeName ref="#Calcutta">Calcutta</placeName>. 
                         Et <persName ref="#Cromarty">Sir Francis Cromarty</persName> citait, à l'appui de ce dire, un fait de même nature qui 
                         s'était passé récemment. A son avis, la <rs type="person" ref="#Aouda">jeune femme</rs> ne serait véritablement en 
-                        sûreté qu'après avoir quitté l'<placeName ref="Inde">Inde</placeName>.</p> 
+                        sûreté qu'après avoir quitté l'<placeName ref="#Inde">Inde</placeName>.</p> 
                      
                      <p><persName ref="#Fogg">Phileas Fogg</persName> répondit à <persName ref="#Cromarty">Sir Francis </persName> 
                         qu'il tiendrait compte de ses observations et qu'il aviserait.</p>
@@ -583,11 +605,11 @@
                         reprenaient toute leur douceur indienne.</p>
                      
                      <p>Lorsque le roi-poëte <persName ref="Uddaul">Uçaf Uddaul</persName>, célèbre les charmes de la 
-                        <name type="person">reine d'Ahméhnagara</name>, il s'exprime ainsi : <said who="#Uddaul" direct="false">
+                        <persName ref="#Ahméhnagara">reine d'Ahméhnagara</persName>, il s'exprime ainsi : <said who="#Uddaul" direct="false">
                         « Sa luisante chevelure, régulièrement divisée en deux parts, encadre les contours harmonieux 
                         de ses joues délicates et blanches, brillantes de poli et de fraîcheur. Ses sourcils d'ébène ont la forme et la puissance de l'arc 
                         de <persName ref="#Kama">Kama</persName>, dieu d'amour, et sous ses longs cils soyeux, dans la pupille noire de ses grands yeux limpides, 
-                        nagent comme dans les lacs sacrés de l'<placeName ref="Himalaya">Himalaya</placeName> les reflets les plus purs de la lumière céleste. 
+                        nagent comme dans les lacs sacrés de l'<placeName ref="#Himalaya">Himalaya</placeName> les reflets les plus purs de la lumière céleste. 
                         Fines, égales et blanches, ses dents resplendissent entre ses lèvres souriantes, comme des gouttes de rosée dans le sein mi-clos 
                         d'une fleur de » grenadier. Ses oreilles mignonnes aux courbes symétriques, ses mains vermeilles, ses petits pieds bombés et tendres 
                         comme les bourgeons du lotus, brillent de l'éclat des plus belles perles de <placeName ref="#Ceylan">Ceylan</placeName>, des plus beaux
@@ -597,15 +619,15 @@
                         divine de <persName ref="#Vicvacarma">Vicvacarma</persName>, l'éternel statuaire. »</said></p>
                      
                      <p>Mais, sans toute cette amplification poétique, il suffit de dire que <persName ref="#Aouda">Mrs. Aouda</persName>, la veuve du rajah 
-                        du <placeName ref="Bundelkund">Bundelkund</placeName>, était une charmante femme dans toute l'acception européenne 
+                        du <placeName ref="#Bundelkund">Bundelkund</placeName>, était une charmante femme dans toute l'acception européenne 
                         du mot. Elle parlait l'anglais avec une grande pureté, et le <rs type="person" ref="#Parsi">guide</rs> n'avait point exagéré en 
                         affirmant que cette jeune parsie avait été transformée par l'éducation. 
-                        Cependant, le train allait quitter la station d'<placeName ref="Allahabad">Allahabad</placeName>. 
-                        Le <persName ref="Parsi">Parsi</persName> attendait. <persName ref="#Fogg">Mr. Fogg</persName> lui régla son salaire au prix convenu, 
+                        Cependant, le train allait quitter la station d'<placeName ref="#Allahabad">Allahabad</placeName>. 
+                        Le <persName ref="#Parsi">Parsi</persName> attendait. <persName ref="#Fogg">Mr. Fogg</persName> lui régla son salaire au prix convenu, 
                         sans le dépasser d'un farthing. Ceci étonna un peu <persName ref="#P">Passepartout</persName>, qui savait tout-ce que son 
                         <rs type="person" ref="#Fogg">maître</rs> devait au dévouement du <rs type="person" ref="#Parsi">guide</rs>. 
-                        Le <persName ref="Parsi">Parsi</persName> avait, en effet, risqué volontairement sa vie dans l'affaire
-                        de <placeName ref="Pillaji">Pillaji</placeName>, et si, plus tard, les Indous l'apprenaient, 
+                        Le <persName ref="#Parsi">Parsi</persName> avait, en effet, risqué volontairement sa vie dans l'affaire
+                        de <placeName ref="#Pillaji">Pillaji</placeName>, et si, plus tard, les Indous l'apprenaient, 
                         il échapperait difficilement à leur vengeance.</p> 
                      
                      <p>Restait aussi la question de <rs type="animal" ref="#Kiouni">l'éléphant</rs>.
@@ -625,7 +647,7 @@
                        
                      <p><name type="animal" ref="#Kiouni">L'éléphant</name> fit entendre quelques grognements de satisfaction; puis, prenant 
                         <persName ref="#">Passepartout</persName> par la ceinture et l'enroulant de sa trompe, il l'enleva 
-                        jusqu'à la hauteur de sa tête. <persName ref="#Passepartout">Passepartout</persName>, nullement effrayé, 
+                        jusqu'à la hauteur de sa tête. <persName ref="#P">Passepartout</persName>, nullement effrayé, 
                         fit une bonne caresse à l'<rs type="animal" ref="#Kiouni">animal</rs>, qui le replaça doucement à terre, et, 
                         à la poignée de trompe de l'honnête 
                         <name type="animal" ref="#Kiouni">éléphant</name>, répondit une vigoureuse poignée de main de l'honnête garçon.</p>
@@ -633,9 +655,9 @@
                      <p>Quelques instants après, <persName ref="#Fogg">Phileas Fogg</persName>, <persName ref="#Cromarty">sir Francis </persName> et 
                         <persName ref="#P">Passepartout</persName>, installés dans un confortable wagon dont 
                         <persName ref="#Aouda">Mrs. Aouda</persName> occupait la meilleure place, 
-                        couraient à toute vapeur vers <placeName ref="Benares">Bénares</placeName>.</p> 
+                        couraient à toute vapeur vers <placeName ref="#Benares">Bénares</placeName>.</p> 
                      
-                     <p>Quatre-vingts milles au plus séparent cette ville d'<placeName ref="Allahabad">Allahabad</placeName>, et ils furent 
+                     <p>Quatre-vingts milles au plus séparent cette ville d'<placeName ref="#Allahabad">Allahabad</placeName>, et ils furent 
                         franchis en deux heures.</p>
                      
                      <p>Pendant ce trajet, <rs type="person" ref="#Aouda">la jeune femme</rs> revint complètement à elle, les vapeurs 
@@ -643,12 +665,12 @@
                         recouverte de vêtements européens, au milieu de voyageurs qui lui étaient absolument inconnus!</p>
                         
                      <p>Tout d'abord, ses compagnons lui prodiguèrent leurs soins et la ranimèrent avec quelques gouttes de liqueur; puis, 
-                        le <persName ref="Cromarty">brigadier-général</persName> lui raconta son histoire. 
+                        le <persName ref="#Cromarty">brigadier-général</persName> lui raconta son histoire. 
                         Il insista sur le dévouement de <persName ref="#Fogg">Phileas Fogg</persName>, qui n'avait pas hésité à jouer sa vie pour la sauver, 
-                        et sur le dénoument de l'aventure, dû à l'audacieuse imagination de <persName ref="#Passepartout">Passepartout</persName>.</p>
+                        et sur le dénoument de l'aventure, dû à l'audacieuse imagination de <persName ref="#P">Passepartout</persName>.</p>
                      
-                     <p><persName ref="Fogg">Mr. Fogg</persName> laissa dire sans prononcer une parole.
-                        <persName ref="P">Passepartout</persName>, tout honteux, répétait 
+                     <p><persName ref="#Fogg">Mr. Fogg</persName> laissa dire sans prononcer une parole.
+                        <persName ref="#P">Passepartout</persName>, tout honteux, répétait 
                         que <said who="#P" direct="true">« ça n'en valait pas la peine! »</said></p>
                      
                      <p><persName ref="#Aouda">Mrs. Aouda</persName> remercia ses sauveurs avec effusion, par ses larmes plus que par ses paroles. 
@@ -659,10 +681,10 @@
                      <p><cb/><lb/><persName ref="#Fogg">Phileas Fogg</persName>  comprit ce qui se passait dans la jeune femme déposée dans une chambre de la gare, 
                         <persName ref="#P">Passepartout</persName> fut chargé d'aller acheter pour elle divers objets de toilette, robe, châle, fourrures, etc., ce qu'il trouverait. 
                         Son maître lui ouvrait un crédit illimité.l'esprit de <persName ref="#Aouda">Mrs. Aouda</persName>, et pour la rassurer, il lui offrit, très froidement 
-                        d'ailleurs, de la conduire à <placeName ref="Hong-Kong">Hong-Kong</placeName>, où elle demeurerait jusqu'à ce que cette affaire fut assoupie.</p>
+                        d'ailleurs, de la conduire à <placeName ref="#Hong-Kong">Hong-Kong</placeName>, où elle demeurerait jusqu'à ce que cette affaire fut assoupie.</p>
                      
                      <p><persName ref="#Aouda">Mrs. Aouda</persName> accepta l'offre avec reconnaissance. Précisément, à 
-                        <placeName ref="Hong-Kong">Hong-Kong</placeName> habitait un de ses parents, Parsi comme elle, et l'un des principaux négociants  
+                        <placeName ref="#Hong-Kong">Hong-Kong</placeName> habitait un de ses parents, Parsi comme elle, et l'un des principaux négociants  
                         de cette <placeName ref="#Hong-Kong">ville</placeName>, qui est absolument anglaise,  tout en occupant un point de la côte chinoise.</p>
                      
                      <p>A midi et demi, le train s'arrêtait à la station de <placeName ref="#Benares">Bénarès</placeName>. Les lémendes brahmaniques affirment 
@@ -691,25 +713,26 @@
                         et aussi, malgré la saison avancée et la température déjà froide, des bandes d'Indous des deux sexes, 
                         qui accomplissaieut pieusement leurs saintes ablutions. Ces fidèles, ennemis acharnés du boudhisme, sont sectateurs fervents 
                         de la religion brahmanique qui s'incarne en ces trois personnes <persName ref="#Whisnou">Whisnou</persName>, la divinité solaire, 
-                        <persName ref="Shiva">Shiva</persName>, la personnification divine des forces naturelles, 
-                        et <persName ref="Brahma">Brahma</persName>, le maî-
-                        <cb/>tre suprême des prêtres et des législateurs. Mais <persName ref="Brahma">Brahma</persName>, 
-                        <persName ref="Shiva">Shiva</persName> et <persName ref="#Whisnou">Whisnou</persName>. de quel œil devaient-ils considérer 
-                        cette Inde, maintenant « britannisée, » quand- quelque steam-boat passait en hennissant et troublait les eaux consacrées du
-                        <placeName ref="#Gange">Gange</placeName>, effarouchant les mouettes qui volaient à sa surface, 
+                        <persName ref="#Shiva">Shiva</persName>, la personnification divine des forces naturelles, 
+                        et <persName ref="#Brahma">Brahma</persName>, le maî-
+                        <cb/>tre suprême des prêtres et des législateurs. Mais <persName ref="#Brahma">Brahma</persName>, 
+                        <persName ref="#Shiva">Shiva</persName> et <persName ref="#Whisnou">Whisnou</persName>, de quel œil devaient-ils considérer 
+                        cette <placeName ref="#Inde">Inde</placeName>, maintenant « britannisée, » quand quelque steam-boat passait en hennissant 
+                        et troublait les eaux consacrées du <placeName ref="#Gange">Gange</placeName>, effarouchant les mouettes qui volaient à sa surface, 
                         les tortues qui pullulaient sur ses bords, et les dévots étendus au long de ses rives!</p>
                      
-                     <p>Tout ce panorama passa comme un éclair et souvent un nuage de vapeur blanche en cacha les détails A peine les voyageurs purent-ils 
+                     <p>Tout ce panorama passa comme un éclair et souvent un nuage de vapeur blanche en cacha les détails. A peine les voyageurs purent-ils 
                         entrevoir le <placeName ref="#Chunar">fort de Chunar</placeName>, à vingt milles au sud-est de 
                         <placeName ref="#Benares">Bénarès</placeName>, ancienne forteresse des rajahs du <placeName ref="#Behar">Béhar</placeName>,
                         <placeName ref="#Ghazepour">Ghazepour</placeName> et ses importantes fabriques d'eau de rose, le tombeau 
-                        de <persName ref="#Corwallis">lord Corwallis</persName> qui s'élève sur la rive gauche du <placeName ref="#Gange">Gange</placeName>, 
-                        la ville fortifiée de <placeName ref="#Buxar">Buxar</placeName>, <placeName ref="#Patna">Patna</placeName>,
-                        grande cité industrielle et commerçante, ou se tient le principal marché d'opium de l'<placeName ref="#Inde">Inde</placeName>,
-                        <placeName ref="#Monghir">Monghir</placeName>, ville plus qu'européenne, anglaise comme <placeName ref="#Manchester">Manchester</placeName> 
-                        ou <placeName ref="#Birmingham">Birmingham</placeName>, renommée pour ses fonderies de fer, 
-                        ses fabriques de taillanderie et d'armes kanches, et dont les hautes cheminées encrassaient d'une fumée noire le ciel de 
-                        <persName ref="#Brahma">Brahma</persName>, un véritable coup de poing dans le <placeName ref="#Inde">pays du rêve</placeName> !</p>
+                        de <persName type="nobility" ref="#Cornwallis">lord Cornwallis</persName> qui s'élève sur la rive gauche du 
+                        <placeName ref="#Gange">Gange</placeName>, la ville fortifiée de <placeName ref="#Buxar">Buxar</placeName>, 
+                        <placeName ref="#Patna">Patna</placeName>, grande cité industrielle et commerçante, ou se tient le principal marché d'opium 
+                        de l'<placeName ref="#Inde">Inde</placeName>, <placeName ref="#Monghir">Monghir</placeName>, ville plus qu'européenne, 
+                        anglaise comme <placeName ref="#Manchester">Manchester</placeName> ou <placeName ref="#Birmingham">Birmingham</placeName>,
+                        renommée pour ses fonderies de fer, ses fabriques de taillanderie et d'armes kanches, 
+                        et dont les hautes cheminées encrassaient d'une fumée noire le ciel de 
+                        <persName ref="#Brahma">Brahma</persName>, un véritable coup de poing dans le <placeName ref="#Inde">pays du rêve</placeName>!</p>
                      
                      <p>Puis la nuit vint, et, au milieu des hululements des tigres, des ours, des loups qui fuyaient devant la locomotive, le train passa 
                         à toute vitesse, et on ne vit plus rien des merveilles du <placeName ref="#Bengale">Bengale</placeName>, 
