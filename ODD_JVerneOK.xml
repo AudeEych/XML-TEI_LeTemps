@@ -39,6 +39,293 @@
       <body>
          <div1>
             <head>Documentation</head>
+            <p><emph rend="italic">Note préliminaire</emph> :<list>
+               <item>Ce document respecte le TEI all</item>
+               <item>L'encodage XML-TEI ne déclare pas qu'une seule entité ; une brève DTD a donc été
+                  créée</item>
+            </list>
+            </p>
+            
+            <div2>
+               <head>Introduction</head>
+               
+               <p> La présente ODD vise à documenter l'encodage en XML-TEI du roman <emph>Le tour du monde en 80 jours</emph>. 
+                  Écrit par Jules Verne, celui-ci a été publié Ce roman de Jules Verne est publié pour la première fois du 6 novembre au 22 décembre 1872 
+                  dans le feuilleton du journal <emph>Le Temps</emph>, avec des interruptions régulières.
+                  L'encodage porte en l'espèce sur le chapitre XIV, le dernier du roman, paru dans le numéro du
+                  17 novembre 1872 du journal. </p>
+               
+               <p>Cette ODD a été créée avec ODD by Example et se compose de deux parties : la
+                  documentation et les règles de validation appliquées au document TEI.</p>
+               
+               <p>La documentation vient présenter les éléments et attributs utilisés pour
+                  l'encodage en XML-TEI ainsi que les règles éventuellement appliquées. Elle se veut
+                  pédagogique et détaillée en vue de permettre à une personne tierce de poursuivre
+                  l'encodage suivant le même schéma, ou de permettre à un utilisateur d'exploiter
+                  l'encodage réalisé.</p>
+               
+               <p>Les règles de validation sont quant à elles normalisées afin
+                  d'assurer la qualité des données et de permettre leur exploitation.</p>
+               
+               <p>Une attention particulière a ainsi été donnée à l'encodage de la parole, des
+                  personnages et des lieux dans le but de faciliter la navigation dans l'oeuvre et de pouvoir produire des données statistiques. 
+                  L'encodage de la parole et des
+                  personnages permet d'étudier les rapports entre les protagonistes de l'histoire, 
+                  les espaces de parole qui leurs sont dédiés, mais également la fréquence
+                  d'apparition de tous les personnages selon les contextes, y compris les figures mythologiques, religieuses, historiques 
+                  mentionnées dans l'épisode, et qui sont essentielles dans l'intention de l'auteur qui fait voyager fictivement
+                  un public qui voyage peu encore en 1872 pour lui faire découvrir les nombreuses cultures qu'il rencontre à travers son tour du monde.
+                  L'encodage des lieux visités par les personnages, permet d'étudier leur diversité, la cause en vue de laquel ils sont mentionnés 
+                  par l'auteur,- ce qu'ils représentent à l'époque de ce voyage -, leur emplacement.</p>
+                  
+               <p>Ces données pourraient par la suite être croisées avec d'autres romans-feuilleton
+                  de l'époque ou l'oeuvre de Jules Verne.</p>
+               
+               <p>Enfin, les éléments de régularisation de l'orthographe et de la syntaxe pourraient
+                  par exemple servir à étudier l'évolution de la langue française depuis 1872, ou
+                  bien la qualité des éditions des romans-feuilletons de l'époque. 
+                  Un seul de ces élément a été repéré dans cet épisode.</p>
+            </div2>
+            
+            <div2>
+               <head>Structure générale du document XML</head>
+               
+               <p>Le document XML est contenu à l'intérieur d'un élément racine <gi>TEI</gi>. Ce
+                  dernier se compose d'un élément <gi>teiHeader</gi> renseignant les métadonnées du
+                  document, ainsi que d'un élément <gi>text</gi> abritant l'encodage lui-même.</p>
+            </div2>
+            
+            <div2>
+               <head>Renseigner les métadonnées du document : le <gi>teiHeader</gi></head>
+               <p>Le <gi>teiHeader</gi> rassemble les métadonnées du document original ainsi que du
+                  présent encodage électronique. Il se compose de trois éléments : le
+                  <gi>fileDesc</gi>, l'<gi>encodingDesc</gi> et le <gi>profileDesc</gi>.</p>
+               
+               <div3>
+                  <head>Le <gi>fileDesc</gi></head>
+                  <p>Le <gi>fileDesc</gi> permet d'indiquer les éléments bibliographiques du
+                     doucument source et du présent document électronique. Il se compose de quatre
+                     éléments : le <gi>titleStmt</gi>, l'<gi>editionStmt</gi>, le
+                     <gi>publicationStmt</gi> et le <gi>sourceDesc</gi>.</p>
+                  
+                  <div4>
+                     <head>Le <gi>titleStmt</gi></head>
+                     <p>Le <gi>titleStmt</gi> renseigne les informations relatives au titre du
+                        document encodé (<gi>title</gi>) et l'auteur ou l'autrice de celui-ci
+                        (<gi>author</gi>).</p>
+                     <p>En l'espèce, l'élément <gi>author</gi> a été enrichi d'un attribut
+                        <att>ref</att> redirigeant vers la notice de George Sand du catalogue IdReF, 
+                        Référentiel pour l'Enseignement supérieur et la Recherche,
+                        ainsi que d'un identifiant (<att>xml:id</att>). L'élément
+                        <gi>author</gi> se décompose en prénom (<gi>forename</gi>) et nom
+                        (<gi>surname</gi>) de l'auteur.</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <titleStmt>
+                           <title>Le tour du monde en 80 jours</title>
+                           <author xml:id="JV"
+                              ref="https://www.idref.fr/027181685">
+                              <forename>Jules</forename>
+                              <surname>Verne</surname>
+                           </author>
+                        </titleStmt>
+                     </egXML>
+                  </div4>
+                  
+                  <div4>
+                     <head>L'<gi>editionStmt</gi></head>
+                     <p>L'<gi>editionStmt</gi> vient présenter l'édition du document encodé au sein
+                        d'un élément <gi>edition</gi>, tandis que son responsable est renseigné dans
+                        l'élément <gi>respStmt</gi>.</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <editionStmt>
+                           <edition> Encodage et ODD FEUILLETON DU TEMPS DU 17 NOVEMBRE 1872 réalisés dans le cadre du cours de XML-TEI de
+                              Mme Ségolène Albouy du Master TNAH de l'Ecole Nationale des Chartes. </edition>
+                           <respStmt>
+                              <resp>Encodage XML-TEI et création d'une ODD</resp>
+                              <persName xml:id="AE">
+                                 <forename>Aude</forename>
+                                 <surname>Eychenne</surname>
+                              </persName>
+                           </respStmt>
+                        </editionStmt>
+                     </egXML>
+                  </div4>
+                  
+                  <div4>
+                     <head>Le <gi>publicationStmt</gi></head>
+                     <p>Le <gi>publicationStmt</gi> donne des informations relatives à la
+                        publication du document encodé : responsable (<gi>publisher</gi>), lieu
+                        (<gi>pubPlace</gi>), date (<gi>date</gi>), licence et accès
+                        (<gi>availability</gi> et <gi>licence</gi>).</p>
+                     <p>La date est indiquée à l'aide d'une balise <gi>date</gi> portant l'attribut
+                        <att>when-iso</att> (la valeur de cet attribut est renseignée selon la
+                        norme ISO 8601 - https://fr.wikipedia.org/wiki/ISO_8601).</p>
+                     <p>Le présent document n'étant pas publié, cette section aurait dû rester vide.
+                        Un exemple d'encodage (basé sur le cours) a cependant été renseigné afin de
+                        montrer ce à quoi un <gi>publicationStmt</gi> complet pourrait
+                        ressembler.</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <publicationStmt>
+                           <!-- En admettant que cet encodage soit publié sur Élec sous licence CC Share-Alike -->
+                           <publisher>Éditions en ligne de l’école des chartes</publisher>
+                           <pubPlace>Paris</pubPlace>
+                           <date when-iso="2023-02">Février 2023</date>
+                           <availability>
+                              <licence
+                                 target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr"
+                                 >Licence Creative Commons Attribution-partage dans les mêmes
+                                 conditions</licence>
+                           </availability>
+                        </publicationStmt>
+                     </egXML>
+                  </div4>
+
+                  <div4>
+                     <head>Le <gi>sourceDesc</gi></head>
+                     <p>Le <gi>sourceDesc</gi> vient décrire le document source. Pour plus
+                        d'exhaustivité, il présente un élément <gi>biblFull</gi>. Nous y retrouvons
+                        le titre et l'auteur (<gi>titleStmt</gi>) ainsi que des informations sur
+                        l'éditeur du document source (<gi>publicationStmt</gi>, à ne pas confondre
+                        avec le même élément vu ci-dessus, qui se réfère quant à lui au document
+                        encodé) et l'extrait encodé (<gi>seriesStmt</gi>).</p>
+                     <p>Le pays est indiqué à l'aide d'une balise <gi>country</gi> portant
+                        l'attribut <att>key</att> (la valeur de cet attribut correspondant au code
+                        du pays selon la norme ISO 3166 -
+                        https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).</p>
+                     <p>La date est indiquée à l'aide d'une balise <gi>date</gi> portant l'attribut
+                        <att>when-iso</att> (la valeur de cet attribut est renseignée selon la
+                        norme ISO 8601 - https://fr.wikipedia.org/wiki/ISO_8601).</p>
+                     <p>Un lien vers la numérisation du roman-feuilleton est fourni via l'attribut
+                        <att>facs</att> de l'élément <gi>distributor</gi> (élément compris dans
+                        le <gi>publicationStmt</gi>).</p>
+                     <p>Le <gi>seriesStmt</gi> a été utilisé pour renseigner le type d'ouvrage et le
+                        passage encodé via des éléments <gi>biblScope</gi> présentant un attribut
+                        <att>unit</att>. Un premier élément <gi>biblScope</gi> présente ainsi un
+                        attribut <att>unit</att> de valeur <val>"book"</val> et un deuxième de
+                        valeur <val>"chapter"</val>. Enfin, un troisième <gi>biblScope</gi>
+                        comprend, en plus d'un attribut <att>unit</att> de valeur <val>"page"</val>,
+                        un attribut <att>n</att> afin d'indiquer la
+                        page encodée.</p>
+                     
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <sourceDesc>
+                           <biblFull>
+                              <titleStmt>
+                                 <title>Le tour du monde en quatre-vingts jours</title>
+                                 <author ref="https://www.idref.fr/027181685">
+                                    <forename>Jules</forename>
+                                    <surname>Verne</surname>
+                                 </author>
+                              </titleStmt>
+                              <publicationStmt>
+                                 <publisher>Le Temps</publisher>
+                                 <pubPlace>
+                                    <address>
+                                       <country key="FR"/>
+                                       <settlement type="city">Paris</settlement>
+                                  </address>
+                                 </pubPlace>
+                                 <date when-iso="1872-11-17">17 novembre 1872</date>
+                                 <distributor
+                                    facs="https://gallica.bnf.fr/ark:/12148/bpt6k2251979/f1.item">
+                                    Bibliothèque nationale de France </distributor>
+                                 <availability>
+                                    <licence
+                                       target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                                       > Domaine public </licence>
+                                 </availability>
+                              </publicationStmt>
+                              <seriesStmt>
+                                 <title>Dans lequel Phileas Fogg descend toute l'admirable vallée du Gange sans même songer à la voir</title>
+                                 <biblScope unit="book">Le tour du monde en quatre-vingts jours</biblScope>
+                                 <biblScope unit="chapter">XIV</biblScope>
+                                 <biblScope unit="page" n="1">1</biblScope>
+                              </seriesStmt>
+                           </biblFull>
+                        </sourceDesc>
+                     </egXML>
+                  </div4>
+               </div3>
+               
+               <div3>
+                  <head>L'<gi>encodingDesc</gi></head>
+                  <p>L'<gi>encodingDesc</gi> permet de préciser des informations relatives à
+                     l'encodage du texte. Il se compose ici de deux éléments <gi>projectDesc</gi>. </p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <encodingDesc>
+                        <projectDesc>
+                           <p>Encodage réalisé dans le cadre du cours de XML-TEI de Mme Ségolène
+                              Albouy du Master TNAH de l'Ecole nationale des chartes</p>
+                        </projectDesc>
+                        <p>Cet encodage a été réalisé à partir de la numérisation disponible sur
+                           Gallica et transcrit fidèlement, à l'exception des césures de fin de
+                           ligne qui furent retirées pour plus de lisibilité et faciliter la
+                           recherche textuelle.</p>
+                     </encodingDesc>
+                  </egXML>
+               </div3>
+               
+               <div3>
+                  <head>Le <gi>profileDesc</gi></head>
+                  <p>Le <gi>profileDesc</gi> renseigne les informations non-relatives aux références
+                     bibliographiques du texte. Il se compose ici de trois éléments : le
+                     <gi>creation</gi>, le <gi>particDesc</gi> et le <gi>settingDesc</gi>.</p>
+                  <p>Le <gi>particDesc</gi> et le <gi>settingDesc</gi> servent d'index des
+                     personnages et des lieux évoqués dans le roman. Leur utilisation est
+                     méthodiquement contrôlée afin d'obtenir des informations complètes et
+                     homogènes, essentielles à une étude du texte.</p>
+                  
+                  <div4>
+                     <head>L'élément <gi>creation</gi></head>
+                     <p>L'élément <gi>creation</gi> indique la date et le pays de création du
+                        document source, ainsi que sa langue.</p>
+                     <p>La date est indiquée à l'aide d'une balise <gi>date</gi> portant l'attribut
+                        <att>when-iso</att> (la valeur de cet attribut est renseignée selon la
+                        norme ISO 8601 - https://fr.wikipedia.org/wiki/ISO_8601).</p>
+                     <p>Le pays est indiqué à l'aide d'une balise <gi>country</gi> portant
+                        l'attribut <att>key</att> (la valeur de cet attribut correspondant au code
+                        du pays selon la norme ISO 3166 -
+                        https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).</p>
+                     <p>La langue est indiquée à l'aide d'une balise <gi>lang</gi> portant
+                        l'attribut <att>xml:lang</att> (la valeur de cet attribut est renseignée
+                        selon la norme ISO 639-1 -
+                        https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1).</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <creation>
+                           <date when-iso="1857-01-14">14 janvier 1857</date>
+                           <country key="FR">France</country>
+                           <lang xml:lang="fr"/>
+                        </creation>
+                     </egXML>
+                  </div4>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+            
+            <div4>
+               <head>Établir un lien avec les numérisations</head>
+               <p>De la même manière, cet encodage se propose de conserver les mentions
+                  propres à l'édition matérielle du texte afin de permettre des études se
+                  concentrant sur ces éléments ou bien d'en faciliter la suppression si celles-ci ne
+                  sont pas utilisées car facilement repérables. </p>
+               
+               <div5>
+                  <head>L'organisation formelle de l'écrit</head>
+                  <p>La structure de l’encodage a également pour but de rendre compte du
+                     support physique de la publication du roman-feuilleton. En cela, il a été
+                     décidé de faire apparaître les changements de colonne par l’élément
+                     <gi>cb</gi>, les changements de ligne par l’élément <gi>lb</gi>.</p>
+                  
+                  <p>L’élément <gi>cb</gi> est quant à lui, complété par l'attribut 
+                     <att>rend</att>, et la valeur <val>hyphen</val> dans le cas où le changement de ligne coupe un mot.</p>
+        
+            
+            
             
          <div1>
                <head>Règles de validation</head>
