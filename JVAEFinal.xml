@@ -20,7 +20,8 @@
          <!-- Informations sur l'édition du document encodé -->
          <editionStmt>
             <edition>
-               Exercice XML TEI - Encodage FEUILLETON DU TEMPS DU 17 NOVEMBRE 1872
+               Encodage et ODD FEUILLETON DU TEMPS DU 17 NOVEMBRE 1872 réalisés dans le cadre du cours de XML-TEI de
+               Mme Ségolène Albouy du Master TNAH de l'Ecole Nationale des Chartes. 
             </edition>
             <respStmt>
                <resp>Encodage XML-TEI et création d'une ODD</resp>
@@ -64,7 +65,7 @@
                         <settlement type="city">Paris</settlement>
                      </address>
                   </pubPlace>
-                  <date when-iso="1872-11-17">17 novembre 1872 </date> 
+                  <date when-iso="1872-11-17">17 novembre 1872</date> 
                   <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k2251979/f1.item">
                      Bibliothèque nationale de France
                   </distributor>
@@ -165,11 +166,6 @@
                      Probablement une référence à Asaf-ud-Daula, le Nawab wazir d'Oudh (1748–1797) d'après Alex Kirstukas</note>
                </person>
                
-               <person xml:id="Ahmehnagara">
-                  <persName><roleName type="nobility">Reine</roleName>d'Ahméhnagara</persName>
-                  <note type="explication">Probablement un personnage de fiction créé par Jules Verne</note>
-               </person>
-               
                <person xml:id="Mahomet">
                   <persName>Mahomet</persName>
                   <note>Fondateur et prophète majeur de l'islam.</note>
@@ -199,6 +195,11 @@
                <person xml:id="Kama">
                   <persName>Kama</persName>
                   <note type="explication">Dieu d'amour</note>
+               </person>
+               
+               <person xml:id="Ahmehnagara">
+                  <persName><roleName type="nobility">Reine</roleName>d'Ahméhnagara</persName>
+                  <note type="explication">Probablement un personnage de fiction créé par Jules Verne</note>
                </person>
                
                
@@ -570,19 +571,19 @@
                   <lb/><head rend="Majuscules">Le tour du monde<lb/>en<lb/>quatre-vingts jours</head>
                   <div n="1.3" type="chapter">
                      <lb/><head rend="Majuscules">XIV
-                        <lb/>DANS LEQUEL PHILEAS FOGG
-                        <lb/>DESCEND TOUTE L'ADMIRABLE VALLÉE DU GANGE 
-                        <lb/>SANS MÊME SONGER A LA VOIR.</head>
+                        <lb/>Dans lequel Phileas Fogg
+                        <lb/>Ddescend toute l'admirable vallée du Gange
+                        <lb/>sans même songer à la voir.</head>
                      <p><cb/>
                         <lb/>Le hardi enlèvement avait réussi- 
                         <lb/>Une heure après, <persName ref="#P">Passepartout</persName> riait encore 
                         <lb/>de son succès. <persName ref="#Cromarty">Sir Francis Cromarty</persName> avait serré 
                         <lb/>la main de l'intrépide <rs type ="person" ref="#P">garçon</rs>. Son <rs type ="person" ref="#Fogg">maître</rs> lui
-                        <lb/>avait dit. <said who="Fogg" direct="true">«Bien»</said>Ce qui, dans la bouche de
+                        <lb/>avait dit <said who="#Fogg" aloud="true" direct="true" toWhom="#P">«Bien»</said>Ce qui, dans la bouche de
                         <lb/>ce <rs type="person" ref="#Fogg">gentleman</rs>, équivalait à une haute appro-
                         <lb rend="hyphen"/>bation.A quoi <persName ref="#P">Passepartout</persName> avait répondu
-                        <lb/>que tout l'honneur de l'affaire appartenait
-                        <lb/>à son <rs type ="person" ref="#Fogg">maître</rs>. Pour lui, il n'avait eu qu'une 
+                        <lb/>que <said who="#P" aloud="false" direct="false" toWhom="#Fogg">tout l'honneur de l'affaire appartenait
+                           <lb/>à son <rs type ="person" ref="#Fogg">maître</rs></said>. Pour lui, il n'avait eu qu'une 
                         <lb/>idée « drôle, » et il riait en songeant que,
                         <lb/>pendant quelques instants, lui, <persName ref="#P">Passepar-
                         <lb rend="hyphen"/>tout</persName>, ancien gymnaste, ex-sergent de 
@@ -617,7 +618,7 @@
                         <lb/>Indienne</rs> ne fit pas question dans l'esprit 
                         <lb/>du <rs type="person" ref="#Cromarty">brigadier-général</rs>, celui-ci se montrait
                         <lb/>moins rassuré pour l'avenir. Il n'hésita pas 
-                        <lb/>à dire à <persName ref="#Fogg">Phileas Fogg</persName> que si <persName ref="#Aouda">Mrs. Aouda</persName> res-
+                        <lb/>à dire à <persName ref="#Fogg">Phileas Fogg</persName> que <said who="#Cromarty" aloud="false" direct="false" toWhom="#Fogg">si <persName ref="#Aouda">Mrs. Aouda</persName> res-
                         <lb rend="hyphen"/>tait dans l'<placeName ref="#Inde">Inde</placeName>, elle retomberait inévitable-
                         <lb rend="hyphen"/>ment entre les mains des bourreaux. Ces
                         <lb/> énergumènes se tenaient dans toute la pé-
@@ -628,10 +629,10 @@
                         <lb/>pui de ce dire, un fait de même nature qui 
                         <lb/>s'était passé récemment. A son avis, la 
                         <lb/><rs type="person" ref="#Aouda">jeune femme</rs> ne serait véritablement en
-                        <lb/>sûreté qu'après avoir quitté l'<placeName ref="#Inde">Inde</placeName>.</p>
+                        <lb/>sûreté qu'après avoir quitté l'<placeName ref="#Inde">Inde</placeName></said>.</p>
                      <p>
                         <lb/><persName ref="#Fogg">Phileas Fogg</persName> répondit à <persName ref="#Cromarty">Sir Francis </persName> 
-                        <lb/>qu'il tiendrait compte de ses observations et 
+                        <lb/>qu'<said who="#Fogg" aloud="false" direct="false" toWhom="#Cromarty"></said>il tiendrait compte de ses observations et 
                         <lb/>qu'il aviserait.</p>
                      <p>
                         <lb/>Vers dix heures, le <rs type="person" ref="#Parsi">guide</rs> annonçait la
@@ -647,12 +648,10 @@
                         <lb/>pour <placeName ref="#Hong-Kong">Hong-Kong</placeName>.</p> 
                      <p>
                         <lb/>La <rs type="person" ref="#Aouda">jeune femme</rs> déposée dans une cham-
-                        <lb rend="hyphen"/>bre de la gare, <persName ref="#P">Passepartout</persName> 
-                        fut chargé 
+                        <lb rend="hyphen"/>bre de la gare, <persName ref="#P">Passepartout</persName> fut chargé 
                         <lb/>d'aller acheter pour elle divers objets de 
                         <lb/>toilette, robe, châle, fourrures, etc., ce 
-                        <lb/>qu'il trouverait. 
-                        Son <rs type="person" ref="#Fogg">maître</rs> lui ouvrait 
+                        <lb/>qu'il trouverait. Son <rs type="person" ref="#Fogg">maître</rs> lui ouvrait 
                         <lb/>un crédit illimité.</p>
                      <p>
                         <lb/><persName ref="#P">Passepartout</persName> partit aussitôt et courut 
@@ -695,7 +694,7 @@
                         <lb/>Lorsque le roi-poëte <persName ref="Uddaul">Uçaf Uddaul</persName>, célè-
                         <lb rend="hyphen"/>bre les charmes de la <persName ref="#Ahméhnagara">reine d'Ahméhna-
                         <lb rend="hyphen"/>gara</persName>, il s'exprime ainsi : 
-                        <lb/><said who="#Uddaul" direct="false"> « Sa luisante chevelure, régulièrement di-
+                        <lb/><said who="#Uddaul" aloud="false" direct="true"> « Sa luisante chevelure, régulièrement di-
                         <lb rend="hyphen"/>visée en deux parts, encadre les contours 
                         <lb/>harmonieux de ses joues délicates et blan-
                         <lb rend="hyphen"/>ches, brillantes de poli et de fraîcheur. 
@@ -751,22 +750,22 @@
                      <p>
                         <lb/>Mais <persName ref="#Fogg">Phileas Fogg</persName> avait déjà pris une 
                         <lb/>résolution à cet égard.
-                        <lb/><said who="#Fogg" direct="true">« Parsi, </said>dit-il au guide, <said who="#Fogg" direct="true">tu as été servia-
+                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">« Parsi, </said>dit-il au guide, <said who="#Fogg" direct="true" toWhom="#Parsi">tu as été servia-
                         <lb rend="hyphen"/>ble et devoué. J'ai payé ton service, mais
                         <lb/>non ton dévouement. Veux-tu cet <rs ref="#Kiouni">élé-
                         <lb rend="hyphen"/>phant</rs> ? Il est à toi. »</said></p>
                      <p>
                         <lb/>Les yeux du <rs type="person" ref="#Parsi">guide</rs> brillèrent.
-                        <lb/><said who="#Parsi" direct="true">« C'est une fortune que Votre Honneur 
+                        <lb/><said who="#Parsi" direct="true" toWhom="#Fogg">« C'est une fortune que Votre Honneur 
                         <lb/>me donne! </said>s'écria-t-il. 
-                        <lb/><said who="#Fogg" direct="true">-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName><said>, et 
+                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName><said>, et 
                         <lb/>c'est moi qui serai encore ton débiteur.</said> 
-                        <lb/><said who="#">-A la bonne heure!</said> s'écria <persName ref="#Passepartout">Passepar-
-                        <lb rend="hyphen"/>tout</persName>. <said>Prends, ami Parsi! <name type="animal" ref="#Kiouni"> l'éléphant</name> est 
+                        <lb/><said who="#P" direct="true" toWhom="#Parsi" >-A la bonne heure!</said> s'écria <persName ref="#Passepartout">Passepar-
+                        <lb rend="hyphen"/>tout</persName>. <said who="#P" direct="true" toWhom="#Parsi"> Prends, ami Parsi! <name type="animal" ref="#Kiouni"> l'éléphant</name> est 
                         <lb/>un brave et courageux animal! »</said> 
                         <lb/>Et, allant à la bête, il lui présenta 
                         <lb/>quelques morceaux de sucre,  disant 
-                        <lb/><said>« Tiens, <name type="animal" ref="#Kiouni">Kiouni</name>, tiens, tiens! »</said></p>
+                        <lb/><said who="#P" direct="true" toWhom="#Kiouni">« Tiens, <name type="animal" ref="#Kiouni">Kiouni</name>, tiens, tiens! »</said></p>
                      <p>
                         <lb/><name type="animal" ref="#Kiouni">L'éléphant</name> fit entendre quelques gro-
                         <lb rend="hyphen"/>gnements de satisfaction; puis, prenant 
@@ -807,7 +806,7 @@
                      <p>
                         <lb/><persName ref="#Fogg">Mr. Fogg</persName> laissa dire sans prononcer une 
                         <lb/>parole.<persName ref="#P">Passepartout</persName>, tout honteux, répé- 
-                        <lb rend="hyphen"/>tait que <said who="#P" direct="true">« ça n'en valait pas la peine! »</said></p>
+                        <lb rend="hyphen"/>tait que <said who="#P" aloud="true" direct="true">« ça n'en valait pas la peine! »</said></p>
                      <p>
                         <lb/><persName ref="#Aouda">Mrs. Aouda</persName> remercia ses sauveurs avec 
                         <lb/>effusion, par ses larmes plus que par ses
@@ -961,4 +960,3 @@
       </body>
    </text>
 </TEI>
-
