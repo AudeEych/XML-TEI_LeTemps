@@ -616,12 +616,8 @@
                                  disposer d'un attribut ref. -->
                   <constraintSpec ident="refPersonneText" scheme="schematron">
                      <constraint>
-                        <s:pattern>
-                           <s:rule context="tei:TEI/tei:text/descendant::tei:persName">
-                              <s:assert test="@ref">Un élément persName dans le text doit
+                        <s:assert test="@ref">Un élément persName dans le text doit
                                  obligatoirement disposer d'un attribut ref.</s:assert>
-                           </s:rule>
-                        </s:pattern>
                      </constraint>
                   </constraintSpec>
                   <attList>
@@ -653,7 +649,7 @@
                
                
                
-               
+              REPRENDRE ici
                
                <!--Checking module textcrit-->
                <classRef key="att.textCritical"/>
