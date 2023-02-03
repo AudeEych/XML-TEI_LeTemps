@@ -7,8 +7,8 @@
       <!-- Description bibliographique du fichier numérique et de la source -->
       <fileDesc>
          <titleStmt>
-            <title>LE TOUR DU MONDE EN QUATRE-VINGTS JOURS</title>
-            <title type="sub">DANS LEQUEL PHILEAS FOGG DESCEND TOUTE L'ADMIRABLE VALLÉE DU GANGE SANS MÊME SONGER A LA VOIR.</title>
+            <title>Le tour du monde en quatre-vingts jours.</title>
+            <title type="sub">Dans lequel Phileas Fogg descend toute l'admirable vallée du Gange sans même songer à la voir.</title>
             <author>
                <persName xml:id="JV" ref="https://www.idref.fr/027181685">
                   <forename>Jules</forename>
@@ -32,12 +32,12 @@
             </respStmt>
          </editionStmt>
          
-         <!-- Informations sur la publication/distribution du document encodé. Pr ODD : Travail placé sous une licence CC permettant libre réutilisation hors utlisation cciale -->
+         <!-- Informations sur la publication/distribution du document encodé.-->
          <publicationStmt>
-            <!-- En admettant que cet encodage soit publié sur Élec sous licence CC Share-Alike -->
+            <!-- En admettant que cet encodage soit publié sous licence CC Share-Alike -->
             <publisher>Éditions en ligne de l’École des chartes</publisher>
             <pubPlace>Paris</pubPlace>
-            <date when-iso="2022-01">Janvier 2022</date> 
+            <date when-iso="2022-01">Fevrier 2022</date> 
             <availability>
                <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">
                   Licence Creative Commons Attribution-partage dans les mêmes conditions
@@ -178,11 +178,9 @@
                   <sex value="F"/>
                   <note>Probablement un personnage de légende créé par Jules Verne</note>
                </person>
-               
-               
+
                
             </listPerson>
-            
             <!--figures divines-->
             <listPerson type = "mythic">
                <person xml:id="Brahma">
@@ -609,7 +607,7 @@
                         <lb/>ce <rs type="person" ref="#Fogg">gentleman</rs>, équivalait à une haute appro-
                         <lb rend="hyphen"/>bation.A quoi <persName ref="#P">Passepartout</persName> avait répondu
                         <lb/>que <said who="#P" aloud="false" direct="false" toWhom="#Fogg">tout l'honneur de l'affaire appartenait
-                           <lb/>à son <rs type ="person" ref="#Fogg">maître</rs></said>. Pour lui, il n'avait eu qu'une 
+                        <lb/>à son <rs type ="person" ref="#Fogg">maître</rs></said>. Pour lui, il n'avait eu qu'une 
                         <lb/>idée « drôle, » et il riait en songeant que,
                         <lb/>pendant quelques instants, lui, <persName ref="#P">Passepar-
                         <lb rend="hyphen"/>tout</persName>, ancien gymnaste, ex-sergent de 
