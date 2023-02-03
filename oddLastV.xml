@@ -636,7 +636,44 @@
                </elementSpec>
        
        
-       
+       <elementSpec ident="persName" mode="change">
+                  <!-- Un élément persName dans le text doit obligatoirement
+                                 disposer d'un attribut ref. -->
+                  <constraintSpec ident="refPersonneText" scheme="schematron">
+                     <constraint>
+                        <s:pattern>
+                           <s:rule context="tei:TEI/tei:text/descendant::tei:persName">
+                              <s:assert test="@ref">Un élément persName dans le text doit
+                                 obligatoirement disposer d'un attribut ref.</s:assert>
+                           </s:rule>
+                        </s:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                        <valItem ident="yes"/>
+                     </valList>
+                  </attDef>
+                  <attDef ident="key" mode="delete"/>
+                  <attDef ident="type" mode="change">
+                     <valList mode="add" type="closed">
+                        <valItem ident="animal"/>
+                     </valList>
+                  </attDef>
+                  </attList>
+               </elementSpec>
+               
+               
+               
+               
+               
+               
+               
+               
        
        
             <moduleRef key="tei"/>
