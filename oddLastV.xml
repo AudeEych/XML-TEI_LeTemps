@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
-   <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
+   xmlns:rng="http://relaxng.org/ns/structure/1.0">
+   <teiHeader xml:lang="fr">
       <fileDesc>
          
          <titleStmt>
@@ -423,9 +424,6 @@
                      dans un élément <hi>head</hi>, le numéro du chapitre ici encodé du roman.
                   </item>
                </list>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <!--rajouter ici l'exemple montrant les trois sous div-->
-               </egXML>
             </div2>
             
             <div2>
@@ -480,9 +478,7 @@
                         Son <rs type="person" ref="#Fogg">maître</rs> lui ouvrait 
                         <lb/>un crédit illimité.
                      </egXML>
-                     
                   </div4>
-                  
                </div3>
                
                <div3>
@@ -551,7 +547,6 @@
                
                <div3>
                   <head>Rectifier l'orthographe du texte source</head>
-                  
                   <p>Un mot s'est avéré être erroné et a été donc rectifiés. Ces corrections apportées au
                      texte original figurent dans l'élément <gi>choice</gi>.</p>
                   <p>Ces derniers se composent alternativement de deux éléments obligatoires :</p>
@@ -561,7 +556,6 @@
                   <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
                      Il n'avait donc <choice><orig>n'y</orig><reg>ni</reg></choice>retard ni avance.
                   </egXML>
-                  
                </div3>
             </div2>
          </div1>
@@ -595,9 +589,9 @@
                <!-- RÈGLES SUR LES PERSONNAGES INDÉXÉS ET RÉFÉRENCÉS -->
                <elementSpec ident="person" mode="change">
                   <content>
-                     <!-- L'élément "person" doit contenir au moins un élément persName, éventuellement un élément sex, et obligatoirement un élément note-->
+                     <!-- L'élément "person" doit contenir au moins un élément persName, un élément sex, un élément note-->
                      <elementRef key="persName" minOccurs="1" maxOccurs="unbounded"/>
-                     <elementRef key="sex" minOccurs="0" maxOccurs="1"/>
+                     <elementRef key="sex" minOccurs="1" maxOccurs="1"/>
                      <elementRef key="note" minOccurs="1" maxOccurs="unbounded"/>
                   </content>
                   <attList>
@@ -612,7 +606,33 @@
                   </attList>
                </elementSpec>
                
-         
+               <elementSpec ident="persName" mode="change">
+                  <!-- Un élément persName dans le text doit obligatoirement
+                                 disposer d'un attribut ref. -->
+                  <constraintSpec ident="refPersonneText" scheme="schematron">
+                     <constraint>
+                        <s:pattern>
+                           <s:rule context="tei:TEI/tei:text/descendant::tei:persName">
+                              <s:assert test="@ref">Un élément persName dans le text doit
+                                 obligatoirement disposer d'un attribut ref.</s:assert>
+                           </s:rule>
+                        </s:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
                <elementSpec ident="sex" mode="change">
                   <attList>
                      <attDef ident="facs" mode="delete"/>
@@ -634,36 +654,11 @@
                      </attDef>
                   </attList>
                </elementSpec>
-       
-       
-       <elementSpec ident="persName" mode="change">
-                  <!-- Un élément persName dans le text doit obligatoirement
-                                 disposer d'un attribut ref. -->
-                  <constraintSpec ident="attReq" scheme="schematron">
-                     <constraint>
-                       
-                              <s:assert test="@ref">Un élément persName dans le text doit
-                                 obligatoirement disposer d'un attribut ref.</s:assert>
                           
-                     </constraint>
-                  </constraintSpec>
-                  <attList>
-                     <attDef ident="facs" mode="delete"/>
-                     <attDef ident="source" mode="delete"/>
-                     <attDef ident="when-iso" mode="delete"/>
-                     <attDef ident="full" mode="change">
-                        <valList mode="add" type="closed">
-                        <valItem ident="yes"/>
-                     </valList>
-                  </attDef>
-                  <attDef ident="key" mode="delete"/>
-                  <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="animal"/>
-                     </valList>
-                  </attDef>
-                  </attList>
-               </elementSpec>
+              
+               
+               
+               <!-- RÈGLES SUR LES LIEUX INDÉXÉS ET RÉFÉRENCÉS, PAYS ET LOCALISATIONS -->
                
                
                
@@ -671,7 +666,26 @@
                
                
                
+       
+       
                
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        
             <moduleRef key="tei"/>
@@ -1575,6 +1589,8 @@
                </attList>
             </elementSpec>
          </schemaSpec>
+         </div1>
       </body>
+      
    </text>
 </TEI>
