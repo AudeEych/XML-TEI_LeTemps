@@ -639,14 +639,12 @@
        <elementSpec ident="persName" mode="change">
                   <!-- Un élément persName dans le text doit obligatoirement
                                  disposer d'un attribut ref. -->
-                  <constraintSpec ident="refPersonneText" scheme="schematron">
+                  <constraintSpec ident="attReq" scheme="schematron">
                      <constraint>
-                        <s:pattern>
-                           <s:rule context="tei:TEI/tei:text/descendant::tei:persName">
+                       
                               <s:assert test="@ref">Un élément persName dans le text doit
                                  obligatoirement disposer d'un attribut ref.</s:assert>
-                           </s:rule>
-                        </s:pattern>
+                          
                      </constraint>
                   </constraintSpec>
                   <attList>
