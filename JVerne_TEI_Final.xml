@@ -105,7 +105,7 @@
             <!--Personnages propres à l'histoire-->
             <listPerson type="fictional">
                <person xml:id="Fogg">
-                  <persName >Phileas Fogg</persName>
+                  <persName>Phileas Fogg</persName>
                   <sex value="M"/>
                   <note><persName ref="Fogg">Phileas Fogg</persName>gentleman anglais, est le personnage principal de l'histoire.
                      Le roman raconte sa course autour du monde qu'il a fait le pari de réaliser en quatre-vingts jours.</note>
@@ -617,7 +617,7 @@
                         <lb/>pas eu conscience de ce qui s'était passé. 
                         <lb/>Enveloppée dans les couvertures de voya-
                         <lb rend="hyphen"/>ge, elle reposait sur l'un des cacolets.</p>
-                     <p><lb/>Cependant, <name type="animal" ref="#Kiouni">l'éléphant</name>, guidé avec une
+                     <p><lb/>Cependant, <persName ref="#Kiouni">l'éléphant</persName>, guidé avec une
                         <lb/>extrême sûreté par <persName ref="#Parsi">le Parsi</persName>, courait rapi-
                         <lb/>dement dans la forêt encore obscure. Une 
                         <lb/><note type="note_bas_de_page">Voir le Temps des 6, 7, 8, 9, 10, 14, 15 et 16 
@@ -645,7 +645,7 @@
                         <lb/>à dire à <persName ref="#Fogg">Phileas Fogg</persName> que <said who="#Cromarty" aloud="false" direct="false" toWhom="#Fogg">si <persName ref="#Aouda">Mrs. Aouda</persName> res-
                         <lb rend="hyphen"/>tait dans l'<placeName ref="#Inde">Inde</placeName>, elle retomberait inévitable-
                         <lb rend="hyphen"/>ment entre les mains des bourreaux. Ces
-                        <lb/> énergumènes se tenaient dans toute la <rs type="placeName" ref="#Inde">pé-
+                        <lb/> énergumènes se tenaient dans toute la <rs type="place" ref="#Inde">pé-
                         <lb rend="hyphen"/>ninsule</rs>, et certainement, malgré la police
                         <lb/>anglaise, ils sauraient reprendre leur <rs type="person" ref="#Aouda">vic-
                         <lb/>time</rs>, fût-ce à <placeName ref="#Madras">Madras</placeName>, à <placeName ref="#Bombay">Bombay</placeName>, à <placeName ref="#Calcutta">Cal-
@@ -715,7 +715,7 @@
                         <lb/>peu à peu, et ses beaux yeux reprenaient 
                         <lb/>toute leur douceur indienne.</p>
                      <p>
-                        <lb/>Lorsque le roi-poëte <persName ref="Uddaul">Uçaf Uddaul</persName>, célè-
+                        <lb/>Lorsque le roi-poëte <persName ref="#Uddaul">Uçaf Uddaul</persName>, célè-
                         <lb rend="hyphen"/>bre les charmes de la <persName ref="#Ahméhnagara">reine d'Ahméhna-
                         <lb rend="hyphen"/>gara</persName>, il s'exprime ainsi : 
                         <lb/><said who="#Uddaul" aloud="false" direct="false"> « Sa luisante chevelure, régulièrement di-
@@ -774,7 +774,7 @@
                      <p>
                         <lb/>Mais <persName ref="#Fogg">Phileas Fogg</persName> avait déjà pris une 
                         <lb/>résolution à cet égard.
-                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">« Parsi, </said>dit-il au guide, <said who="#Fogg" direct="true" toWhom="#Parsi">tu as été servia-
+                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">« Parsi,</said>dit-il au guide,<said who="#Fogg" direct="true" toWhom="#Parsi">tu as été servia-
                         <lb rend="hyphen"/>ble et devoué. J'ai payé ton service, mais
                         <lb/>non ton dévouement. Veux-tu cet <rs ref="#Kiouni">élé-
                         <lb rend="hyphen"/>phant</rs> ? Il est à toi. »</said></p>
@@ -785,13 +785,13 @@
                         <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName><said>, et 
                         <lb/>c'est moi qui serai encore ton débiteur.</said> 
                         <lb/><said who="#P" direct="true" toWhom="#Parsi" >-A la bonne heure!</said> s'écria <persName ref="#Passepartout">Passepar-
-                        <lb rend="hyphen"/>tout</persName>. <said who="#P" direct="true" toWhom="#Parsi"> Prends, ami Parsi! <name type="animal" ref="#Kiouni"> l'éléphant</name> est 
+                           <lb rend="hyphen"/>tout</persName>. <said who="#P" direct="true" toWhom="#Parsi"> Prends, ami Parsi! <persName ref="#Kiouni">l'éléphant</persName> est 
                         <lb/>un brave et courageux animal! »</said> 
                         <lb/>Et, allant à la bête, il lui présenta 
                         <lb/>quelques morceaux de sucre,  disant 
-                        <lb/><said who="#P" direct="true" toWhom="#Kiouni">« Tiens, <name type="animal" ref="#Kiouni">Kiouni</name>, tiens, tiens! »</said></p>
+                        <lb/><said who="#P" direct="true" toWhom="#Kiouni">« Tiens, 44444444, tiens, tiens! »</said></p>
                      <p>
-                        <lb/><name type="animal" ref="#Kiouni">L'éléphant</name> fit entendre quelques gro-
+                        <lb/><persName ref="#Kiouni">L'éléphant</persName> fit entendre quelques gro-
                         <lb rend="hyphen"/>gnements de satisfaction; puis, prenant 
                         <lb/><persName ref="#">Passepartout</persName> par la ceinture et l'enrou-
                         <lb rend="hyphen"/>lant de sa trompe, il l'enleva jusqu'à la
@@ -799,10 +799,10 @@
                         <lb rend="hyphen"/>ment effrayé, fit une bonne caresse à l'<rs type="animal" ref="#Kiouni">
                         <lb rend="hyphen"/>nimal</rs>, qui le replaça doucement à terre, 
                         <lb/>et, à la poignée de trompe de l'honnête 
-                        <lb/><name type="animal" ref="#Kiouni">éléphant</name>, répondit une vigoureuse poignée de main de l'honnête garçon.</p>
+                        <lb/><persName ref="#Kiouni">éléphant</persName>, répondit une vigoureuse poignée de main de l'honnête garçon.</p>
                      <p>
                         <lb/>Quelques instants après, <persName ref="#Fogg">Phileas Fogg</persName>, 
-                        <lb/><persName ref="#Cromarty">sir Francis </persName> et <persName ref="#P">Passepartout</persName>, 
+                        <lb/><persName ref="#Cromarty">sir Francis</persName> et <persName ref="#P">Passepartout</persName>, 
                         <lb/>installés dans un confortable wagon dont 
                         <lb/><persName ref="#Aouda">Mrs. Aouda</persName> occupait la meilleure place, 
                         <lb/>couraient à toute vapeur vers <placeName ref="#Benares">Bénares</placeName>.</p> 
@@ -842,7 +842,7 @@
                         <lb/>de terreur. </p>
                      <p>
                         <cb/>
-                        <lb/><persName ref="#Fogg">Phileas Fogg</persName>  comprit ce qui se passait 
+                        <lb/><persName ref="#Fogg">Phileas Fogg</persName> comprit ce qui se passait 
                         <lb/>dans l'esprit de Mrs. Aouda, et pour la
                         <lb/>rassurer, il lui offrit, très froidement d'ail-
                         <lb rend="hyphen"/>leurs, de la conduire à Hong-Kong, où elle
@@ -928,7 +928,7 @@
                            <lb/>sud-est de <placeName ref="#Benares">Bénarès</placeName>, ancienne forteresse 
                            <lb/>des rajahs du <placeName ref="#Behar">Béhar</placeName>,<placeName ref="#Ghazepour">Ghazepour</placeName> et ses im-
                            <lb rend="hyphen"/>portantes fabriques d'eau de rose, le tom-
-                           <lb rend="hyphen"/>beau de <persName type="nobility" ref="#Cornwallis">lord Cornwallis</persName> qui s'élève sur la 
+                           <lb rend="hyphen"/>beau de <persName ref="#Cornwallis">lord Cornwallis</persName> qui s'élève sur la 
                            <lb/>rive gauche du <placeName ref="#Gange">Gange</placeName>, la ville fortifiée de 
                            <lb/><placeName ref="#Buxar">Buxar</placeName>, <placeName ref="#Patna">Patna</placeName>, grande cité industrielle et 
                            <lb/>commerçante, ou se tient le principal mar-
