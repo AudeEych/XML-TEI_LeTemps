@@ -699,7 +699,7 @@
        
        
        
-            <moduleRef key="tei"/>
+           
             <!--Checking module textcrit-->
             <classRef key="att.textCritical"/>
             <classRef key="model.rdgLike"/>
@@ -923,7 +923,7 @@
                   <attDef ident="source" mode="delete"/>
                </attList>
             </elementSpec>
-            <elementSpec ident="moduleRef" mode="change">
+            <!--<elementSpec ident="moduleRef" mode="change">
                <attList>
                   <attDef ident="prefix" mode="delete"/>
                   <attDef ident="except" mode="delete"/>
@@ -931,7 +931,7 @@
                   <attDef ident="facs" mode="delete"/>
                   <attDef ident="source" mode="delete"/>
                </attList>
-            </elementSpec>
+            </elementSpec>-->
             <elementSpec ident="schemaSpec" mode="change">
                <attList>
                   <attDef ident="prefix" mode="delete"/>
