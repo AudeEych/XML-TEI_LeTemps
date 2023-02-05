@@ -568,23 +568,18 @@
                <!-- MODULES OBLIGATOIRES -->
                
                <moduleRef key="tei"/>
-               
                <moduleRef key="header"
                   include="teiHeader fileDesc titleStmt editionStmt edition publicationStmt distributor availability licence seriesStmt sourceDesc biblFull encodingDesc projectDesc profileDesc creation"/>
-                  
                <moduleRef key="core"
                   include="p said choice reg orig name rs address postCode date ref head note lb cb author respStmt resp title publisher biblScope pubPlace bibl"/>
-               
                <moduleRef key="textstructure" include="TEI text body div signed"/>
                
                <!--MODULES ADDITIONNELS-->
                
                <moduleRef key="namesdates"
                   include="persName surname forename roleName placeName country settlement listPerson listPlace person place sex"/>
-               
                <moduleRef key="tagdocs"
                   include="classRef moduleRef schemaSpec elementSpec classSpec attList attDef valItem valList"/>
-               
                <moduleRef key="corpus" include="particDesc settingDesc"/>
                <moduleRef key="dictionaries" include="lang"/>
 
@@ -612,8 +607,7 @@
                </elementSpec>
                
                <elementSpec ident="persName" mode="change">
-                  <!-- Un élément persName dans le text doit obligatoirement
-                                 disposer d'un attribut ref. -->
+                  <!-- Un élément persName dans le text doit obligatoirement disposer d'un attribut ref. -->
                   <constraintSpec ident="refPersonneText" scheme="schematron">
                      <constraint>
                         <s:pattern>
@@ -661,7 +655,6 @@
                </elementSpec>
 
                <!-- RÈGLES SUR LES LIEUX INDÉXÉS ET RÉFÉRENCÉS, PAYS ET LOCALISATIONS -->
-
                <elementSpec ident="place" mode="change">
                   <content>
                      <!-- L'élément "place" doit contenir un élément placeName et éventuellement un élément note-->
@@ -674,32 +667,153 @@
                      <attDef ident="type" mode="delete"/>
                      <!-- l'attribut "xml:id" est requis -->
                      <attDef ident="xml:id" mode="change" usage="req"/>
-                     
                   </attList>
                </elementSpec>
                
-       
+               <elementSpec ident="placeName" mode="change">
+                  <!-- Un élément placeName dans le text doit obligatoirement
+                                 disposer d'un attribut ref. -->
+                  <constraintSpec ident="refLieuText" scheme="schematron">
+                     <constraint>
+                        <s:pattern>
+                           <s:rule context="tei:TEI/tei:text/descendant::tei:placeName">
+                              <s:assert test="@ref">Un élément placeName dans le text doit
+                                 obligatoirement disposer d'un attribut ref.</s:assert>
+                           </s:rule>
+                        </s:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <!-- Un élément placeName dans un élément place du settingDesc doit obligatoirement
+                                 disposer d'un élément name. -->
+                  <constraintSpec ident="placeNameSettingDesc" scheme="schematron">
+                     <constraint>
+                        <s:pattern>
+                           <s:rule
+                              context="tei:TEI/tei:teiHeader/tei:profileDesc/tei:settingDesc/tei:listPlace//tei:place/tei:placeName">
+                              <s:assert test="tei:name">Un élément placeName dans le settingDesc
+                                 doit obligatoirement disposer d'un élément name.</s:assert>
+                           </s:rule>
+                        </s:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="city"/>
+                           <valItem ident="country"/>
+                           <valItem ident="district"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
                
+               <elementSpec ident="address" mode="change">
+                  <content>
+                     <!-- L'élément "address" doit contenir un élément country, obligatoirement un élément settlement, zéro ou un élément postCode-->
+                     <elementRef key="country" minOccurs="1" maxOccurs="1"/>
+                     <elementRef key="settlement" minOccurs="1" maxOccurs="1"/>
+                     <elementRef key="postCode" minOccurs="0" maxOccurs="1"/>
+                  </content>
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                  </attList>
+               </elementSpec>
                
+               <elementSpec ident="country" mode="change">
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <!-- l'attribut "key" est requis  -->
+                     <attDef ident="key" mode="change" usage="req">
+                     </attDef>
+                  </attList>
+               </elementSpec>
        
+               <elementSpec ident="postCode" mode="change">
+                  <!-- Un élément postCode dans le profileDesc doit obligatoirement
+                                 disposer d'un attribut source. Cet attribut source doit obligatoirement avoir pour valeur "GeoNames" -->
+                  <constraintSpec ident="postCodeRefText" scheme="schematron">
+                     <constraint>
+                        <s:pattern>
+                           <s:rule
+                              context="tei:TEI/tei:teiHeader/tei:profileDesc/descendant::tei:postCode">
+                              <s:assert test="@source">Un élément postCode dans le profileDesc doit
+                                 obligatoirement disposer d'un attribut source.</s:assert>
+                              <s:assert test="@source='GeoNames'">L'attribut
+                                 source doit être de valeur GeoNames.</s:assert>
+                           </s:rule>
+                        </s:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                  </attList>
+               </elementSpec>
+              
+               <!-- FAIRE RÉFÉRENCE AUX PERSONNAGES ET AUX LIEUX DANS LE TEXT -->
+               
+               <elementSpec ident="rs" mode="change">
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <!-- rs doit obligatoirement avoir un attribut type de valeur "person" ou "place" -->
+                     <attDef ident="type" mode="change" usage="req">
+                        <valList mode="add" type="closed">
+                           <valItem ident="animal"/>
+                           <valItem ident="person"/>
+                           <valItem ident="place"/>
+                        </valList>
+                     </attDef>
+                     <!-- rs doit obligatoirement avoir un attribut "ref" -->
+                     <attDef ident="ref" mode="change" usage="req"/>
+                  </attList>
+               </elementSpec>
        
+               <!-- L'ÉLÉMENT SAID -->
+               
+               <elementSpec ident="said" mode="change">
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <!-- les attributs "who" "aloud" et "direct" sont requis, "toWhom" est optionnel car sa valeur n'est pas systématiquement renseignable -->
+                     <attDef ident="who" mode="change" usage="req"/>
+                     <!-- les valeurs de "aloud" (true ou false) ne sont pas restreintes dans une liste fermée car c'est déjà le cas dans TEI all -->
+                     <attDef ident="aloud" mode="change" usage="req"/>
+                     <!-- les valeurs de "direct" (true ou false) ne sont pas restreintes dans une liste fermée car c'est déjà le cas dans TEI all, avec "true" comme valeur par défaut -->
+                     <attDef ident="direct" mode="change" usage="req"/>
+                     <attDef ident="toWhom" mode="change" usage="opt"/>
+                  </attList>
+               </elementSpec> 
        
+               <!-- AVOIR UN ATTRIBUT ISO POUR LA DATE -->
+               
+               <elementSpec ident="date" mode="change">
+                  <attList>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <!-- l'attribut "when-iso" est requis -->
+                     <attDef ident="when-iso" mode="change" usage="req"/>
+                  </attList>
+               </elementSpec> 
+    
+               <!-- ÉLÉMENTS NON-MODIFIÉS -->
        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-           
             <!--Checking module textcrit-->
             <classRef key="att.textCritical"/>
             <classRef key="model.rdgLike"/>
@@ -712,6 +826,7 @@
                   <attDef ident="require" mode="delete"/>
                </attList>
             </classSpec>
+               
             <!--Checking module msdescription-->
             <classRef key="model.physDescPart"/>
             
@@ -719,7 +834,6 @@
             <classRef key="att.datable.iso"/>
             <classRef key="model.persNamePart"/>
      
-               <!-- elements non modifiés -->
             <elementSpec ident="surname" mode="change">
                <attList>
                   <attDef ident="facs" mode="delete"/>
@@ -767,34 +881,7 @@
                   </attDef>
                </attList>
             </elementSpec>
-            <elementSpec ident="placeName" mode="change">
-               <attList>
-                  <attDef ident="when-iso" mode="delete"/>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="full" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="yes"/>
-                     </valList>
-                  </attDef>
-                  <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="city"/>
-                        <valItem ident="country"/>
-                        <valItem ident="district"/>
-                     </valList>
-                  </attDef>
-               </attList>
-            </elementSpec>
-            <elementSpec ident="country" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="ref" mode="delete"/>
-                  <attDef ident="type" mode="delete"/>
-                  <attDef ident="when-iso" mode="delete"/>
-               </attList>
-            </elementSpec>
+  
             <elementSpec ident="settlement" mode="change">
                <attList>
                   <attDef ident="facs" mode="delete"/>
@@ -839,44 +926,7 @@
                   </attDef>
                </attList>
             </elementSpec>
-               
-            <!--<elementSpec ident="person" mode="change">
-               <attList>
-                  <attDef ident="role" mode="delete"/>
-                  <attDef ident="sex" mode="delete"/>
-                  <attDef ident="gender" mode="delete"/>
-                  <attDef ident="age" mode="delete"/>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-               </attList>
-            </elementSpec>-->
-               
-           <!-- <elementSpec ident="place" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="building"/>
-                        <valItem ident="mountain"/>
-                        <valItem ident="river"/>
-                        <valItem ident="street"/>
-                     </valList>
-                  </attDef>
-               </attList>
-            </elementSpec>-->
-              
-               <!--élément modifié-->
-           <!-- <elementSpec ident="sex" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="when-iso" mode="delete"/>
-                  <attDef ident="type" mode="delete"/>
-               </attList>
-            </elementSpec>-->
-               
-               
+                          
             <classSpec ident="att.datable.iso" type="atts" mode="change">
                <attList>
                   <attDef ident="notBefore-iso" mode="delete"/>
@@ -909,6 +959,7 @@
                   <attDef ident="mergedIn" mode="delete"/>
                </attList>
             </classSpec>
+               
             <!--Checking module tagdocs-->
             <classRef key="att.combinable"/>
             <classRef key="att.identified"/>
@@ -923,15 +974,7 @@
                   <attDef ident="source" mode="delete"/>
                </attList>
             </elementSpec>
-            <!--<elementSpec ident="moduleRef" mode="change">
-               <attList>
-                  <attDef ident="prefix" mode="delete"/>
-                  <attDef ident="except" mode="delete"/>
-                  <attDef ident="url" mode="delete"/>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-               </attList>
-            </elementSpec>-->
+           
             <elementSpec ident="schemaSpec" mode="change">
                <attList>
                   <attDef ident="prefix" mode="delete"/>
@@ -1132,12 +1175,7 @@
                   </attDef>
                </attList>
             </elementSpec>
-            <elementSpec ident="said" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-               </attList>
-            </elementSpec>
+
             <elementSpec ident="choice" mode="change">
                <attList>
                   <attDef ident="facs" mode="delete"/>
@@ -1172,40 +1210,7 @@
                   <attDef ident="type" mode="delete"/>
                </attList>
             </elementSpec>
-            <elementSpec ident="rs" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="key" mode="delete"/>
-                  <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="animal"/>
-                        <valItem ident="person"/>
-                        <valItem ident="place"/>
-                     </valList>
-                  </attDef>
-               </attList>
-            </elementSpec>
-            <elementSpec ident="address" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-               </attList>
-            </elementSpec>
-            <elementSpec ident="postCode" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-               </attList>
-            </elementSpec>
-            <elementSpec ident="date" mode="change">
-               <attList>
-                  <attDef ident="facs" mode="delete"/>
-                  <attDef ident="source" mode="delete"/>
-                  <attDef ident="key" mode="delete"/>
-                  <attDef ident="ref" mode="delete"/>
-                  <attDef ident="type" mode="delete"/>
-               </attList>
-            </elementSpec>
+  
             <elementSpec ident="ref" mode="change">
                <attList>
                   <attDef ident="facs" mode="delete"/>
