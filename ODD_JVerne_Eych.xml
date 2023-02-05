@@ -5,8 +5,8 @@
       <fileDesc>
          
          <titleStmt>
-            <title type="main">Guide d'encodage du roman-feuilleton "Le tour du monde en 80 jours", écrit par Jules Verne et publié par 
-               <emph rend="italic">Le Temps</emph>(numéro du 17 novembre 1872<date
+            <title>Guide d'encodage du roman-feuilleton "Le tour du monde en 80 jours", écrit par Jules Verne et publié par 
+               <hi rend="italic">Le Temps</hi>(numéro du 17 novembre 1872<date
                   when-iso="1872-11-17">17 novembre 1872</date>)</title>
             <author>
                <persName xml:id="AE">
@@ -528,9 +528,6 @@
                      pourvu de nombreux attributs afin de préciser son contexte :</p>
                   <p>Un attribut obligatoire <att>who</att>, dont la valeur fait référence à
                      l'identifiant du locuteur.</p>
-                  <p>Un attribut obligatoire <att>aloud</att> venant indiquer si les paroles ont été
-                     prononcées à voix haute (sa valeur est alors <val>"true"</val>) ou non (sa
-                     valeur est alors de <val>"false"</val>).</p>
                   <p>Un attribut obligatoire <att>direct</att> venant indiquer si le discours est
                      direct (sa valeur est alors <val>"true"</val>, qui est par ailleurs la valeur
                      par défaut) ou rapporté (sa valeur est alors <val>"false"</val>).</p>
@@ -788,10 +785,8 @@
                   <attList>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="source" mode="delete"/>
-                     <!-- les attributs "who" "aloud" et "direct" sont requis, "toWhom" est optionnel car sa valeur n'est pas systématiquement renseignable -->
+                     <!-- les attributs "who" et "direct" sont requis, "toWhom" est optionnel car sa valeur n'est pas systématiquement renseignable -->
                      <attDef ident="who" mode="change" usage="req"/>
-                     <!-- les valeurs de "aloud" (true ou false) ne sont pas restreintes dans une liste fermée car c'est déjà le cas dans TEI all -->
-                     <attDef ident="aloud" mode="change" usage="req"/>
                      <!-- les valeurs de "direct" (true ou false) ne sont pas restreintes dans une liste fermée car c'est déjà le cas dans TEI all, avec "true" comme valeur par défaut -->
                      <attDef ident="direct" mode="change" usage="req"/>
                      <attDef ident="toWhom" mode="change" usage="opt"/>
