@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+<?xml-model href="out/ODD_JVerne_Eych.rng" type="application/xml"
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/ODD_JVerne_Eych.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <!-- Description bibliographique du fichier numérique et de la source -->
@@ -136,7 +136,7 @@
                </person>
                
                <person xml:id="Kiouni"> <!--solution choisie pr l'animal si c'était généralisé ce serait un point à améliorer-->
-                  <persName type="animal">Kiouni</persName>
+                  <persName>Kiouni</persName>
                   <sex value="M"/>
                   <note>Elephant qui transporte <persName ref="#Fogg">Phileas Fogg</persName> et ses compagnons jusqu'à 
                      <placeName ref="Allahabad">Allahabad</placeName></note>
@@ -185,28 +185,29 @@
             <listPerson type = "mythic">
                <person xml:id="Brahma">
                   <persName>Brahma</persName>
-                  <sex value="Other"/>
+                  <sex value="O"/>
                   <note>Dieu de la trinité hindoue, avec Shiva et Whisnou</note>
                </person>
                <person xml:id="Shiva">
                   <persName>Shiva</persName>
-                  <sex value="Other"/>
+                  <sex value="O"/>
                   <note>Dieu de la trinité hindoue, avec Brahma et Whisnou</note>
                </person>
                <person xml:id="Whisnou">
                   <persName>Whisnou</persName>
-                  <sex value="Other"/>
+                  <sex value="O"/>
                   <note>Dieu de la trinité hindoue, avec Brahma et Shiva</note>
                </person>
                <person xml:id="Vicvacarma">
-                  <sex value="Other"/>
+                 
                   <persName>Vicvacarma</persName>
+                  <sex value="O"/>
                   <note>Probablement Vishnu sous la forme du grand bâtisseur Vicvakarma</note>
                </person>
                
                <person xml:id="Kama">
                   <persName>Kama</persName>
-                  <sex value="Other"/>
+                  <sex value="O"/>
                   <note>Dieu d'amour</note>
                </person>
             </listPerson>
@@ -278,7 +279,7 @@
                   </note>
                </place>
                
-               <place xml:id="Gange" type="river">
+               <place xml:id="Gange">
                   <placeName>
                      <name>Gange</name>
                      <address>
@@ -289,7 +290,7 @@
                   <note>Fleuve de la plaine indo-gangétique, au nord de l'<placeName ref="#Inde">Inde</placeName> et la plus sainte des sept rivières sacrées de ce pays. </note>
                </place>
                
-               <place xml:id="Jumna" type="river">
+               <place xml:id="Jumna">
                   <placeName>
                      <name>Jumna</name>
                      <address>
@@ -315,7 +316,7 @@
                      Elle a été la capitale des Indes britanniques de 1773 à 1912</note>
                </place>
                
-               <place xml:id="Pillaji" type="building">
+               <place xml:id="Pillaji">
                   <placeName>
                      <name>pagode de Pillaji</name>
                      <address>
@@ -328,7 +329,7 @@
                      d'un sacrifice humain dans un épisode précédent</note>
                </place>
                
-               <place xml:id="Chunar" type="building">
+               <place xml:id="Chunar">
                   <placeName>
                      <name>fort de Chunar</name>
                      <address>
@@ -450,7 +451,7 @@
                      à une trentaine de kilomètres au nord de <placeName ref="#Calcutta">Calcutta</placeName>.</note>
                </place>
                
-               <place xml:id="Himalaya" type="mountain">
+               <place xml:id="Himalaya">
                   <placeName>
                      <name>Himalaya</name>
                      <address>
@@ -465,8 +466,8 @@
                <place xml:id="Behar">
                   <placeName>
                      <name>Béhar</name>
-                     <country key="IN">Inde</country>
                      <address>
+                        <country key="IN">Inde</country>
                         <settlement>none</settlement>
                         <postCode source="GeoNames">1275716</postCode>
                      </address>
@@ -532,41 +533,43 @@
                <place xml:id="Hong-Kong">
                   <placeName key="CN" type="city">
                   <name>Hong-Kong</name>
-                  <country>Chine</country> 
+                     <country key="CN">Chine</country> 
                   </placeName>
                </place>
                
                <place xml:id="Londres">
                   <placeName key="GB" type="city">
                   <name>Londres</name>
-                  <country>Grande Bretagne</country>
+                     <country key="GB">Grande Bretagne</country>
                   </placeName>
                </place>
                
-               <place xml:id="Regent_Street" type="street">
+               <place xml:id="Regent_Street">
                   <placeName key="GB" >
                   <name>Regent Street</name>
-                  <country>Grande Bretagne</country>  
+                     <country key="GB">Grande Bretagne</country>  
                   </placeName>
                </place>
                
                <place xml:id="Birmingham">
                   <placeName key="GB" type="city">
                   <name>Birmingham</name>
-                  <country>Grande Bretagne</country>   
+                     <country key="GB">Grande Bretagne</country>   
                   </placeName>
                </place>
                
                <place xml:id="Manchester">
                   <placeName key="GB" type="city">
                      <name>Manchester</name>
+                     <country key="GB">Grande Bretagne</country>
                   </placeName>
-                  <country>Grande Bretagne</country>
+                  
                </place>
                
                <place xml:id="Ceylan">
                   <placeName key="LK" type="country">
                   <name>Ceylan</name>
+                     <country key="LK">Ceylan</country>
                   </placeName>
                </place>
                
@@ -776,20 +779,20 @@
                         <lb/>résolution à cet égard.
                         <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">« Parsi,</said>dit-il au guide,<said who="#Fogg" direct="true" toWhom="#Parsi">tu as été servia-
                         <lb rend="hyphen"/>ble et devoué. J'ai payé ton service, mais
-                        <lb/>non ton dévouement. Veux-tu cet <rs ref="#Kiouni">élé-
+                        <lb/>non ton dévouement. Veux-tu cet <rs type="person" ref="#Kiouni">élé-
                         <lb rend="hyphen"/>phant</rs> ? Il est à toi. »</said></p>
                      <p>
                         <lb/>Les yeux du <rs type="person" ref="#Parsi">guide</rs> brillèrent.
                         <lb/><said who="#Parsi" direct="true" toWhom="#Fogg">« C'est une fortune que Votre Honneur 
                         <lb/>me donne! </said>s'écria-t-il. 
-                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName><said>, et 
+                        <lb/><said who="#Fogg" direct="true" toWhom="#Parsi">-Accepte, guide,</said> répondit <persName ref="#Fogg">Mr. Fogg</persName><said who="#Fogg" direct="true" toWhom="#Parsi">, et 
                         <lb/>c'est moi qui serai encore ton débiteur.</said> 
                         <lb/><said who="#P" direct="true" toWhom="#Parsi" >-A la bonne heure!</said> s'écria <persName ref="#Passepartout">Passepar-
                            <lb rend="hyphen"/>tout</persName>. <said who="#P" direct="true" toWhom="#Parsi"> Prends, ami Parsi! <persName ref="#Kiouni">l'éléphant</persName> est 
                         <lb/>un brave et courageux animal! »</said> 
                         <lb/>Et, allant à la bête, il lui présenta 
                         <lb/>quelques morceaux de sucre,  disant 
-                        <lb/><said who="#P" direct="true" toWhom="#Kiouni">« Tiens, 44444444, tiens, tiens! »</said></p>
+                        <lb/><said who="#P" direct="true" toWhom="#Kiouni">« Tiens, tiens, tiens! »</said></p>
                      <p>
                         <lb/><persName ref="#Kiouni">L'éléphant</persName> fit entendre quelques gro-
                         <lb rend="hyphen"/>gnements de satisfaction; puis, prenant 
