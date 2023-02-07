@@ -394,6 +394,17 @@
                      <lb/>heure après avoir quitté la<placeName ref="#Pillaji">pagode de Pil-
                      <lb/>laji</placeName>,
                   </egXML>
+                  <div4>
+                     <head>Document type definition : corrections orthographiques</head>
+                     <p>Une erreur orthographique a été corrigée afin de pouvoir dans un approfondissement ultérieur du projet
+                        rendre compte de la qualité de rédaction des journaux. 
+                        Afin que ces fautes ne disparaissent pas à la faveur de la correction, il a été choisi de les
+                        placer dans un élément <gi>choice</gi>. Une erreur d'orthographe a été placée dans un élément <gi>reg</gi> et sa 
+                        correction dans un <gi>corr</gi>. Cette modification figure dans le fichier DTD associé au document TEI. </p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        Il n'avait donc <choice><orig>n'y</orig><reg>ni</reg></choice>retard ni avance.
+                     </egXML>
+                  </div4>
                   
                   <p>L'organisation formelle de l'écrit a été restituée dans l'encodage, dont La structure a également pour but de rendre compte du
                      support physique de la publication du roman-feuilleton. En cela, il a été
