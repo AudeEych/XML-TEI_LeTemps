@@ -68,6 +68,10 @@
                      <address>
                         <country key="FR"/>
                         <settlement type="city">Paris</settlement>
+                        <postCode>75009</postCode>
+                        <district type="arrondissement">10e</district>
+                        <street>Faubourg Montmartre, <num>10</num>
+                        </street>
                      </address>
                   </pubPlace>
                   <date when-iso="1872-11-17">17 novembre 1872</date> 
